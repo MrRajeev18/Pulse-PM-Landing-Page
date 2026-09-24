@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulsePM — The Real-Time Heartbeat of High-Velocity Product Teams</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              teal: '#00e5a3',
+              cyan: '#00d2ff',
+              blue: '#1e6bff',
+              dark: '#070b14',
+              card: '#0c1220'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#070b14] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-300 min-h-screen overflow-x-hidden antialiased">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] pointer-events-none z-0 overflow-hidden opacity-60">
+    <div class="absolute -top-40 left-1/4 w-[600px] h-[450px] bg-gradient-to-tr from-cyan-500/20 via-blue-600/20 to-indigo-600/10 rounded-full blur-[140px]"></div>
+    <div class="absolute top-20 right-1/4 w-[500px] h-[350px] bg-gradient-to-bl from-teal-400/15 via-blue-500/20 to-sky-400/10 rounded-full blur-[120px]"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#070b14]/80 border-b border-slate-800/80 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3.5 group">
+          <div class="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-blue-500/20 border border-slate-700/50 group-hover:border-cyan-400/50 transition-all duration-300">
+            <img src="assets/logo.png" alt="PulsePM Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">Pulse<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">PM</span></span>
+              <span class="px-1.5 py-0.5 text-[10px] uppercase tracking-wider font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">v2.4</span>
+            </div>
+            <span class="text-[11px] text-slate-400 tracking-tight font-medium -mt-0.5">Real-time Sprint Telemetry</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#about" class="hover:text-cyan-400 transition-colors">About Platform</a>
+          <a href="#features" class="hover:text-cyan-400 transition-colors">Features</a>
+          <a href="#interactive-simulator" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>Live Pulse</span>
+          </a>
+          <a href="#architecture" class="hover:text-cyan-400 transition-colors">How It Works</a>
+          <a href="#pricing" class="hover:text-cyan-400 transition-colors">Pricing</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#pricing" class="text-sm font-semibold text-slate-300 hover:text-white px-4 py-2 transition-colors">
+            Sign In
+          </a>
+          <a href="#get-started" class="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white text-sm font-semibold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span>Get Started Free</span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-toggle" type="button" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="close-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-6 pt-2 border-t border-slate-800/80 space-y-3">
+        <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About Platform</a>
+        <a href="#features" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Features</a>
+        <a href="#interactive-simulator" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Live Pulse Simulator</a>
+        <a href="#architecture" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">How It Works</a>
+        <a href="#pricing" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Pricing</a>
+        <div class="pt-4 border-t border-slate-800/60 flex flex-col gap-3">
+          <a href="#pricing" class="w-full text-center py-2.5 rounded-lg border border-slate-700 text-slate-300 font-medium">Sign In</a>
+          <a href="#get-started" class="w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-md">Get Started Free</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Eyebrow Badge -->
+      <div class="flex justify-center mb-6">
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-cyan-500/30 shadow-inner backdrop-blur-md">
+          <span class="flex h-2.5 w-2.5 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
+          </span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-cyan-300">PulsePM 2.0 Live Engine</span>
+          <span class="text-slate-600">|</span>
+          <span class="text-xs text-slate-300 font-medium">Predict sprint delays before they happen</span>
+        </div>
+      </div>
+
+      <!-- Main Headline & Subtitle -->
+      <div class="text-center max-w-4xl mx-auto space-y-6">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white">
+          Know the <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-500">Heartbeat</span> of Every Sprint Before It Flatlines.
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">
+          Static ticket boards hide project decay. <strong class="text-white font-semibold">PulsePM</strong> replaces manual status checks with live execution telemetry, automated blocker interception, and real-time sprint health diagnostics.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#get-started" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-slate-950 font-bold text-base shadow-xl shadow-cyan-500/20 hover:shadow-cyan-400/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <span>Start Free 14-Day Pilot</span>
+            <svg class="w-5 h-5 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a href="#interactive-simulator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-base backdrop-blur-sm transition-all">
+            <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Explore Interactive Demo</span>
+          </a>
+        </div>
+
+        <!-- Social Proof Pill -->
+        <div class="pt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>No Credit Card Required</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>2-Minute Setup with GitHub & Jira</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-teal-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span>SOC2 Type II Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Dashboard Graphic / Mockup in Hero -->
+      <div class="mt-14 max-w-5xl mx-auto relative group">
+        <!-- Glowing aura behind dashboard -->
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-teal-500/30 via-cyan-500/30 to-blue-600/30 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+        
+        <div class="relative bg-slate-900/90 border border-slate-700/80 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden">
+          <!-- Window Header Bar -->
+          <div class="flex items-center justify-between px-5 py-3.5 bg-slate-950/70 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-3 text-xs font-mono text-slate-400 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-teal-400 inline-block animate-pulse"></span>
+                pulsepm.app/team-apollo/sprint-44/vitals
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Sprint Health: Optimal (96%)
+              </span>
+              <span class="text-xs text-slate-400 font-mono">Day 7 of 10</span>
+            </div>
+          </div>
+
+          <!-- Hero Dashboard Content -->
+          <div class="p-6 md:p-8 space-y-6">
+            <!-- Top Metric Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <!-- Card 1 -->
+              <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4 relative overflow-hidden">
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-medium text-slate-400">Sprint Rhythm (BPM)</span>
+                  <span class="text-teal-400 text-xs font-semibold flex items-center gap-1">
+                    ↑ 12%
+                  </span>
+                </div>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-2xl font-extrabold text-white">72</span>
+                  <span class="text-xs text-slate-400 font-mono">pts / wk</span>
+                </div>
+                <div class="mt-3 w-full bg-slate-700/40 h-1.5 rounded-full overflow-hidden">
+                  <div class="bg-teal-400 h-full rounded-full" style="width: 82%"></div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4">
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-medium text-slate-400">Active Impediments</span>
+                  <span class="px-1.5 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 rounded">Auto-Triaged</span>
+                </div>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-2xl font-extrabold text-white">0</span>
+                  <span class="text-xs text-emerald-400 font-medium">Critical</span>
+                </div>
+                <p class="mt-2 text-[11px] text-slate-400">2 minor PR bottlenecks resolved by AI</p>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4">
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-medium text-slate-400">Code Velocity Pulse</span>
+                  <span class="text-cyan-400 text-xs font-mono">Real-time</span>
+                </div>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-2xl font-extrabold text-white">4.2h</span>
+                  <span class="text-xs text-slate-400 font-mono">avg PR cycle</span>
+                </div>
+                <p class="mt-2 text-[11px] text-slate-400">68% faster than industry benchmark</p>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-4">
+                <div class="flex justify-between items-start">
+                  <span class="text-xs font-medium text-slate-400">Checkmark Confidence</span>
+                  <span class="text-blue-400 text-xs font-semibold">99.1%</span>
+                </div>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span class="text-2xl font-extrabold text-cyan-300">On Track</span>
+                </div>
+                <p class="mt-2 text-[11px] text-slate-400">Ship date locked for Friday, 4 PM</p>
+              </div>
+            </div>
+
+            <!-- ECG Pulse Wave Live Graphic -->
+            <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-5 relative overflow-hidden">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Live Sprint Cardiogram</h4>
+                    <p class="text-xs text-slate-400 font-mono">Listening to commits, PRs, review pings & release checks</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="inline-block w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+                  <span class="text-xs font-mono text-teal-300">STREAMING PULSE</span>
+                </div>
+              </div>
+
+              <!-- Interactive ECG Canvas / SVG Wave -->
+              <div class="h-28 w-full relative flex items-center bg-slate-900/60 rounded-lg p-2 overflow-hidden border border-slate-800/50">
+                <!-- SVG Animated Heartbeat -->
+                <svg class="w-full h-full text-cyan-400" viewBox="0 0 1000 120" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#06d6a0" stop-opacity="0.3" />
+                      <stop offset="50%" stop-color="#00e5a3" stop-opacity="1" />
+                      <stop offset="100%" stop-color="#1e6bff" stop-opacity="0.9" />
+                    </linearGradient>
+                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <!-- Background grid lines -->
+                  <line x1="0" y1="30" x2="1000" y2="30" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="4" />
+                  <line x1="0" y1="60" x2="1000" y2="60" stroke="#1e293b" stroke-width="1" />
+                  <line x1="0" y1="90" x2="1000" y2="90" stroke="#1e293b" stroke-width="0.8" stroke-dasharray="4" />
+
+                  <!-- Pulse Polyline -->
+                  <path id="hero-pulse-path" class="pulse-line" d="M 0,60 L 120,60 L 135,45 L 150,75 L 165,60 L 250,60 L 270,15 L 290,105 L 305,40 L 320,70 L 335,60 L 480,60 L 495,35 L 510,85 L 525,60 L 650,60 L 670,10 L 690,110 L 710,35 L 725,60 L 850,60 L 870,30 L 885,85 L 900,60 L 1000,60" 
+                        fill="none" stroke="url(#pulseGradient)" stroke-width="3" filter="url(#glow)" />
+                </svg>
+
+                <div class="pulse-scanner"></div>
+              </div>
+
+              <!-- Real-time Event Feed inside Hero -->
+              <div class="mt-3 flex items-center justify-between text-xs text-slate-400 font-mono border-t border-slate-800/80 pt-2.5">
+                <div class="flex items-center gap-2">
+                  <span class="text-teal-400 font-bold">LATEST TELEMETRY:</span>
+                  <span class="text-slate-200">PR #482 merged • Passed 42 end-to-end regression suites</span>
+                </div>
+                <span class="text-slate-500">12 seconds ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-16 text-center">
+        <p class="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-6">Empowering engineering & product leaders at modern high-growth teams</p>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-60 grayscale hover:grayscale-0 transition duration-300">
+          <span class="text-slate-400 font-bold text-lg tracking-wider flex items-center gap-2"><span class="text-cyan-400 font-black">▲</span> VORTEX LABS</span>
+          <span class="text-slate-400 font-bold text-lg tracking-wider flex items-center gap-2"><span class="text-teal-400 font-black">●</span> CLOUDNOVA</span>
+          <span class="text-slate-400 font-bold text-lg tracking-wider flex items-center gap-2"><span class="text-blue-400 font-black">■</span> QUANTUMSTACK</span>
+          <span class="text-slate-400 font-bold text-lg tracking-wider flex items-center gap-2"><span class="text-sky-400 font-black">❖</span> SYNCHRONIZE</span>
+          <span class="text-slate-400 font-bold text-lg tracking-wider flex items-center gap-2"><span class="text-indigo-400 font-black">◆</span> HYPERSCALE</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ABOUT PLATFORM SECTION (Comprehensive Deep Dive) -->
+  <!-- ========================================== -->
+  <section id="about" class="py-24 bg-gradient-to-b from-[#070b14] via-slate-950 to-[#070b14] border-t border-b border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          About PulsePM Platform
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Built for teams tired of asking <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">"What's the status of this ticket?"</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Traditional project management tools are cemeteries for forgotten tasks. PulsePM is an intelligent telemetry engine that senses the live tempo of your development pipeline.
+        </p>
+      </div>
+
+      <!-- Core Story: The Paradigm Shift -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div class="space-y-6">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white leading-snug">
+            Why We Built PulsePM: Moving from <span class="text-rose-400 line-through">Stale Trackers</span> to <span class="text-teal-400">Living Telemetry</span>
+          </h3>
+          <p class="text-slate-300 leading-relaxed text-base">
+            Every product leader knows the pain: Monday standups are optimistic, but by Thursday night, unexpected blockers surface, PRs sit unreviewed for 48 hours, and sprint commitments collapse.
+          </p>
+          <p class="text-slate-300 leading-relaxed text-base">
+            We asked ourselves: <em class="text-white font-medium">Why do cardiologists get continuous, millisecond-accurate ECG monitors, while product teams manage mission-critical roadmaps with static sticky notes?</em>
+          </p>
+          <p class="text-slate-300 leading-relaxed text-base">
+            <strong class="text-white font-semibold">PulsePM changes the game.</strong> Instead of forcing engineers to manually drag cards across Kanban columns, PulsePM plugs into your code repositories, CI/CD runners, design prototypes, and communication channels. It measures the genuine <span class="text-cyan-400 font-semibold">pulse</span> of work in progress, calculates predictive health indices, and provides instant <span class="text-blue-400 font-semibold">checkmark verification</span> for every completed requirement.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <div class="flex items-center gap-3 p-3.5 bg-slate-900/80 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center font-bold">
+                ⚡
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Zero Manual Updates</h5>
+                <p class="text-xs text-slate-400">Synthesized straight from commits & PRs</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 bg-slate-900/80 rounded-xl border border-slate-800">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">
+                🛡️
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white">Early Blocker Triage</h5>
+                <p class="text-xs text-slate-400">Detects delays 72h ahead of deadlines</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Comparison: Old Way vs PulsePM -->
+        <div class="relative bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center justify-between pb-5 border-b border-slate-800 mb-6">
+            <h4 class="text-sm font-bold text-slate-300 uppercase tracking-wider">The Transformation</h4>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Telemetry Comparison</span>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Legacy Row -->
+            <div class="p-4 rounded-xl bg-rose-950/20 border border-rose-900/40 text-slate-300 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-rose-400 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                  Legacy PM Tools (Jira / Asana / Boards)
+                </span>
+                <span class="text-[11px] font-mono text-rose-400/80">Reactive</span>
+              </div>
+              <ul class="text-xs text-slate-400 space-y-1.5 pl-4 list-disc marker:text-rose-500">
+                <li>Manual ticket grooming and stale status fields</li>
+                <li>Surprise Friday release blockers and missed sprints</li>
+                <li>Endless synchronous status check meetings</li>
+                <li>Disjointed context between code commits and tasks</li>
+              </ul>
+            </div>
+
+            <!-- PulsePM Row -->
+            <div class="p-4 rounded-xl bg-gradient-to-r from-teal-950/40 via-cyan-950/30 to-blue-950/40 border border-cyan-500/40 text-slate-200 space-y-2 shadow-lg shadow-cyan-500/10">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-teal-300 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+                  PulsePM Automated Telemetry
+                </span>
+                <span class="text-[11px] font-mono text-teal-300 bg-teal-500/20 px-2 py-0.5 rounded">Proactive & Predictive</span>
+              </div>
+              <ul class="text-xs text-slate-300 space-y-1.5 pl-4 list-disc marker:text-teal-400 font-medium">
+                <li>Continuous sprint cardiogram derived from active code rhythm</li>
+                <li>Automated dependency mapping that alerts owners before blockage</li>
+                <li>Autonomous daily standup summaries delivered right to Slack</li>
+                <li>Verified deliverable checkmarks tied to real CI/CD pipelines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The 3 Pillars of PulsePM -->
+      <div class="mt-16">
+        <div class="text-center mb-10">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">Three Pillars That Power the Pulse</h3>
+          <p class="text-sm sm:text-base text-slate-400 mt-2">Engineered from the ground up for high-trust, fast-shipping software organizations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Pillar 1 -->
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-teal-500/40 hover:bg-slate-900/90 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">1. Continuous Velocity Rhythm</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              We monitor throughput cadence, pull request cycle times, and review turnaround without micromanaging engineers. You see true delivery momentum at a glance.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-cyan-500/40 hover:bg-slate-900/90 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">2. Predictive Blocker Radar</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Our telemetry model spots cross-team dependency logjams, design-to-spec discrepancies, and PR stagnation before they compound into missed milestones.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-blue-500/40 hover:bg-slate-900/90 transition-all duration-300 group">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">3. Verified Checkmark Assurance</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              No more "done means done" confusion. A task is checked off only when functional criteria, test coverage, and documentation requirements are validated.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who Is It For? (Role-Based Tabs) -->
+      <div class="mt-20 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-10">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <h4 class="text-xl sm:text-2xl font-bold text-white">Built for Every Stakeholder in the Product Loop</h4>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">Select your role to see how PulsePM transforms your daily workflow.</p>
+        </div>
+
+        <!-- Role Tab Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-8" id="role-tabs">
+          <button class="role-tab-btn active px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-md" data-target="pm">
+            Product Managers & Owners
+          </button>
+          <button class="role-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700" data-target="eng">
+            Engineering Leads & Devs
+          </button>
+          <button class="role-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold transition-all bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700" data-target="leadership">
+            Founders & VP of Tech
+          </button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="role-content-pm" class="role-pane grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="text-xs font-mono font-bold text-teal-400 uppercase tracking-widest">FOR PRODUCT MANAGERS</span>
+            <h5 class="text-2xl font-bold text-white">Say Goodbye to Status Policing.</h5>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Spend your time talking to customers and crafting roadmaps instead of hunting down developers for commit updates. PulsePM generates real-time sprint burndowns, predicts release dates with 95% statistical accuracy, and drafts your release notes automatically.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated PRD-to-Ticket execution sync</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Live risk radar highlighting scope creep early</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-teal-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>One-click stakeholder health reports</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-3">
+            <div class="text-teal-400 flex items-center justify-between pb-2 border-b border-slate-800">
+              <span>// Auto-Generated Stakeholder Brief</span>
+              <span class="text-[10px] text-slate-500">Live Telemetry</span>
+            </div>
+            <p><strong class="text-white">Sprint 44:</strong> Checkout Redesign</p>
+            <p><strong class="text-white">Confidence Score:</strong> <span class="text-emerald-400">97.8% (Target: Nov 14)</span></p>
+            <p><strong class="text-white">Scope Variance:</strong> 0% (No unauthorized additions)</p>
+            <p><strong class="text-white">Critical Path:</strong> Stripe 3DS API integration complete & verified.</p>
+          </div>
+        </div>
+
+        <div id="role-content-eng" class="role-pane hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest">FOR ENGINEERING LEADS & DEVS</span>
+            <h5 class="text-2xl font-bold text-white">Keep Builders in the Flow State.</h5>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              No developer joined tech to fill out time sheets or move Jira cards from "In Review" to "Waiting for QA". PulsePM hooks cleanly into Git CLI, GitHub PRs, and Slack bot triggers. Commit your code, and the board handles itself.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automatic PR review nudge without annoying pinging</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Automated git branch-to-issue matching</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Zero intrusive micromanagement metrics</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-3">
+            <div class="text-cyan-400 flex items-center justify-between pb-2 border-b border-slate-800">
+              <span>$ git push origin feature/auth-v2</span>
+              <span class="text-[10px] text-teal-400">Synced ✓</span>
+            </div>
+            <p class="text-slate-400">> PulsePM Webhook triggered</p>
+            <p class="text-slate-400">> Linked to PulsePM Story #209</p>
+            <p class="text-slate-400">> Assigned reviewers notified in Slack (#team-apollo)</p>
+            <p class="text-emerald-400">> Status updated: [Code Review Active]</p>
+          </div>
+        </div>
+
+        <div id="role-content-leadership" class="role-pane hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <span class="text-xs font-mono font-bold text-blue-400 uppercase tracking-widest">FOR VP OF TECH & FOUNDERS</span>
+            <h5 class="text-2xl font-bold text-white">Board-Level Clarity with Zero BS.</h5>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              When investors or executive boards ask when Key Deliverable X is shipping, you don't have to guess or schedule three emergency pre-meetings. Get birds-eye telemetry across all engineering squads in one unified pulse dashboard.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Cross-squad engineering velocity & capacity benchmarking</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Executive portfolio health scorecards</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <span>Burnout & attrition prevention telemetry</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 font-mono text-xs text-slate-300 space-y-3">
+            <div class="text-blue-400 flex items-center justify-between pb-2 border-b border-slate-800">
+              <span>// Org-Wide Release Readiness Index</span>
+              <span class="text-emerald-400">98% PASS</span>
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex justify-between text-slate-400">
+                <span>Frontend Squad</span>
+                <span class="text-teal-400 font-bold">100% on schedule</span>
+              </div>
+              <div class="flex justify-between text-slate-400">
+                <span>Core Backend Squad</span>
+                <span class="text-teal-400 font-bold">96% on schedule</span>
+              </div>
+              <div class="flex justify-between text-slate-400">
+                <span>Data & AI Squad</span>
+                <span class="text-cyan-400 font-bold">94% on schedule</span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500 pt-2 border-t border-slate-800">Consolidated confidence for Q4 Launch: Highly Favorable</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- INTERACTIVE SIMULATOR (Live Heartbeat Engine) -->
+  <!-- ========================================== -->
+  <section id="interactive-simulator" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-3">
+          Interactive Platform Simulator
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Experience the Pulse In Action</h2>
+        <p class="mt-3 text-slate-300 text-base sm:text-lg">
+          Test how PulsePM reacts in real-time when roadblocks emerge versus when your team is in continuous flow state.
+        </p>
+      </div>
+
+      <!-- Simulator Interactive Box -->
+      <div class="max-w-4xl mx-auto bg-slate-900/90 border border-slate-700/80 rounded-2xl shadow-2xl p-6 sm:p-8 backdrop-blur-xl">
+        <!-- Simulator Controls Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <h4 class="text-base font-bold text-white flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-teal-400 animate-ping"></span>
+              Sprint Telemetry Simulator
+            </h4>
+            <p class="text-xs text-slate-400">Adjust team conditions to watch the health score and pulse wave adapt</p>
+          </div>
+          
+          <div class="flex items-center gap-2">
+            <button id="sim-btn-normal" class="sim-state-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-slate-950 transition-all">
+              Steady Flow
+            </button>
+            <button id="sim-btn-blocker" class="sim-state-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+              Inject Blocker
+            </button>
+            <button id="sim-btn-supercharge" class="sim-state-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition-all">
+              High Velocity
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulator Live Metrics Display -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 text-center">
+            <span class="text-xs text-slate-400 block font-medium">Sprint Rhythm</span>
+            <span id="sim-bpm" class="text-2xl sm:text-3xl font-extrabold text-teal-400 mt-1 block">74 BPM</span>
+            <span id="sim-bpm-status" class="text-[10px] text-teal-300 font-mono">Synchronized</span>
+          </div>
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 text-center">
+            <span class="text-xs text-slate-400 block font-medium">Health Rating</span>
+            <span id="sim-health" class="text-2xl sm:text-3xl font-extrabold text-white mt-1 block">96%</span>
+            <span id="sim-health-status" class="text-[10px] text-emerald-400 font-mono">Optimal</span>
+          </div>
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 text-center">
+            <span class="text-xs text-slate-400 block font-medium">Open Bottlenecks</span>
+            <span id="sim-blockers" class="text-2xl sm:text-3xl font-extrabold text-white mt-1 block">0</span>
+            <span id="sim-blocker-status" class="text-[10px] text-slate-400 font-mono">Clear Runway</span>
+          </div>
+          <div class="bg-slate-950/70 p-4 rounded-xl border border-slate-800 text-center">
+            <span class="text-xs text-slate-400 block font-medium">Est. Delivery</span>
+            <span id="sim-eta" class="text-2xl sm:text-3xl font-extrabold text-cyan-300 mt-1 block">On Time</span>
+            <span id="sim-eta-status" class="text-[10px] text-cyan-400 font-mono">Friday 4:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Cardiogram Canvas Area -->
+        <div class="relative bg-slate-950 rounded-xl p-4 border border-slate-800/80 overflow-hidden">
+          <div class="flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+            <span id="sim-cardio-label">REAL-TIME SPRINT ECG WAVEFORM: NORMAL SINUS RHYTHM</span>
+            <span class="text-teal-400 font-bold" id="sim-indicator">FLOW STATE ACTIVE</span>
+          </div>
+          <div class="h-28 w-full flex items-center relative overflow-hidden bg-slate-900/40 rounded-lg">
+            <svg id="sim-svg" class="w-full h-full" viewBox="0 0 800 100" preserveAspectRatio="none">
+              <path id="sim-path" d="M 0,50 L 100,50 L 115,35 L 130,65 L 145,50 L 220,50 L 240,15 L 260,85 L 275,30 L 290,60 L 305,50 L 420,50 L 440,20 L 460,80 L 475,50 L 590,50 L 610,10 L 630,90 L 650,30 L 665,50 L 800,50" 
+                    fill="none" stroke="#00e5a3" stroke-width="3" />
+            </svg>
+            <div id="sim-scanner" class="pulse-scanner"></div>
+          </div>
+        </div>
+
+        <!-- Live Intelligence Log -->
+        <div class="mt-5 p-4 rounded-xl bg-slate-950/90 border border-slate-800/80">
+          <div class="flex items-center gap-2 text-xs font-mono text-cyan-400 mb-1">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span>AUTONOMOUS AGENT LOG:</span>
+          </div>
+          <p id="sim-log" class="text-xs font-mono text-slate-300">
+            [12:44:02] All 14 pull requests progressing cleanly. Test coverage at 88.4%. No critical impediments detected.
+          </p>
+        </div>
+
+        <!-- Interactive Slider -->
+        <div class="mt-6 pt-5 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="w-full sm:w-2/3">
+            <label for="speed-slider" class="flex justify-between text-xs font-medium text-slate-400 mb-1.5">
+              <span>PR Review & Deployment Velocity:</span>
+              <span id="slider-label" class="text-teal-400 font-mono font-bold">1.0x (Standard)</span>
+            </label>
+            <input type="range" id="speed-slider" min="0.5" max="2.5" step="0.5" value="1.0" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400">
+          </div>
+          <div class="w-full sm:w-auto text-right">
+            <a href="#get-started" class="w-full inline-block px-5 py-2.5 rounded-xl bg-gradient-to-r from-teal-400 to-blue-500 text-slate-950 font-bold text-xs uppercase tracking-wider hover:opacity-90 transition">
+              Deploy to Your Team →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FEATURES & CAPABILITIES -->
+  <!-- ========================================== -->
+  <section id="features" class="py-24 bg-gradient-to-b from-[#070b14] via-slate-950 to-[#070b14] border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Platform Capabilities
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          Everything You Need to Keep <br class="hidden sm:inline"/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-400 to-blue-500">Every Project Alive & Healthy</span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          PulsePM combines modern telemetry tools, algorithmic health scores, and painless automation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-cyan-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            📈
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Automated Sprint Cardiogram</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Visualizes release health like an electrocardiogram. Instantly spot sudden drops in commits, PR bottlenecks, or test failures before release day.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-teal-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            🤖
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">Autonomous Blocker Interceptor</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            AI constantly parses PR comments, unassigned reviews, and Slack questions. It autonomously connects the right teammates to resolve stalemates.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-blue-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            ✅
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">Verified Checkmarks</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Tied directly to unit tests, security scans, and deployment previews. Deliverables are only marked complete when verifiable conditions pass.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-indigo-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            ⚡
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Zero-Friction Git Sync</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Works natively with GitHub, GitLab, and Bitbucket. Developers use normal Git workflows, and PulsePM keeps the entire organization up to date.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-teal-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            💬
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">Asynchronous Standups</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Eliminate tedious 30-minute status meetings. PulsePM compiles concise daily digest snippets sent to Slack, Teams, or your inbox every morning.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-7 hover:border-cyan-500/50 hover:bg-slate-900/90 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xl mb-5 group-hover:scale-110 transition-transform">
+            🔒
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">Enterprise Security & Compliance</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            SOC 2 Type II certified, GDPR compliant, with role-based access control (RBAC), SSO via Okta/SAML, and on-premises deployment options.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- HOW IT WORKS (Architecture & Telemetry Pipeline) -->
+  <!-- ========================================== -->
+  <section id="architecture" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Telemetry Architecture
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">How PulsePM Syncs Your Stack in 3 Steps</h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          No complex SDKs. Connect your existing repositories and let PulsePM stream telemetry in seconds.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="relative bg-slate-900/70 border border-slate-800 rounded-2xl p-8 space-y-4">
+          <div class="text-4xl font-extrabold text-teal-400/20 font-mono">01</div>
+          <h4 class="text-xl font-bold text-white">Connect Repositories & Tools</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            One-click OAuth integration with GitHub, GitLab, Jira, Linear, Figma, and Slack. PulsePM parses your git tree and existing backlog seamlessly.
+          </p>
+          <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-teal-400">
+            ✓ OAuth 2.0 Auth Ready<br/>
+            ✓ 0 code configuration needed
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-slate-900/70 border border-slate-800 rounded-2xl p-8 space-y-4">
+          <div class="text-4xl font-extrabold text-cyan-400/20 font-mono">02</div>
+          <h4 class="text-xl font-bold text-white">Pulse Engine Synthesizes Vitals</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            The telemetry processor monitors PR throughput, cycle times, unblocked paths, and test coverage to generate a live sprint cardiogram.
+          </p>
+          <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-cyan-400">
+            ✓ Real-time ECG signal generation<br/>
+            ✓ Anomaly detection running
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-slate-900/70 border border-slate-800 rounded-2xl p-8 space-y-4">
+          <div class="text-4xl font-extrabold text-blue-400/20 font-mono">03</div>
+          <h4 class="text-xl font-bold text-white">Deliver Without Friday Surprises</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Engineers stay focused in their IDEs. Product managers gain continuous visibility. Features ship on schedule with verified checkmarks.
+          </p>
+          <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-blue-400">
+            ✓ Checkmark verification<br/>
+            ✓ 99.4% on-time sprint lock
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- TESTIMONIALS / WALL OF IMPACT -->
+  <!-- ========================================== -->
+  <section class="py-24 bg-gradient-to-b from-[#070b14] via-slate-950 to-[#070b14] border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Loved by High-Velocity Engineering Teams</h2>
+        <p class="mt-3 text-slate-400 text-base">Here is what product and tech leaders say after switching to PulsePM.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-300 text-sm leading-relaxed italic">
+              "Before PulsePM, our Thursday night sprints were a total coin toss. Now we spot stalled PRs on Tuesday morning. We cut sprint slippage by 75% in our first month."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-teal-400 to-cyan-600 flex items-center justify-center font-bold text-slate-950 text-sm">
+              SR
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-white">Sarah Reynolds</h5>
+              <p class="text-xs text-slate-400">VP of Engineering at Vortex Labs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between border-cyan-500/30">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-300 text-sm leading-relaxed italic">
+              "The live cardiogram is genius. It tells me more in five seconds than a 45-minute standup ever did. Developers love that they never have to touch a Jira ticket again."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-slate-950 text-sm">
+              DK
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-white">David Kim</h5>
+              <p class="text-xs text-slate-400">Head of Product at CloudNova</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-300 text-sm leading-relaxed italic">
+              "Verified Checkmarks solved our quality drift. When PulsePM says a milestone is complete, it has passed tests, lint, and security scanners. Pure peace of mind."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center font-bold text-slate-950 text-sm">
+              AL
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-white">Elena Rostova</h5>
+              <p class="text-xs text-slate-400">CTO at Synchronize Technologies</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- PRICING PLANS -->
+  <!-- ========================================== -->
+  <section id="pricing" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Transparent Pricing
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Invest in Predictable Shipping</h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-300">
+          Try any plan free for 14 days. Scale as your squad grows.
+        </p>
+
+        <!-- Billing Toggle -->
+        <div class="mt-8 flex items-center justify-center gap-3">
+          <span class="text-sm font-medium text-slate-300">Monthly</span>
+          <button id="billing-toggle" type="button" class="w-14 h-7 bg-slate-800 rounded-full p-1 relative transition-colors focus:outline-none">
+            <div id="toggle-thumb" class="w-5 h-5 bg-cyan-400 rounded-full transition-transform translate-x-7"></div>
+          </button>
+          <span class="text-sm font-medium text-white flex items-center gap-1.5">
+            Annual <span class="px-2 py-0.5 rounded-md bg-teal-500/20 text-teal-300 text-xs font-bold">Save 20%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Starter Plan -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+          <div>
+            <h4 class="text-lg font-bold text-white">Starter</h4>
+            <p class="text-xs text-slate-400 mt-1">For budding startups & small agile squads</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white price-starter">$19</span>
+              <span class="text-xs text-slate-400 font-mono">/ member / mo</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Billed annually</p>
+
+            <ul class="mt-8 space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">✓ Up to 10 team seats</li>
+              <li class="flex items-center gap-2.5">✓ Real-time Sprint Cardiogram</li>
+              <li class="flex items-center gap-2.5">✓ GitHub & GitLab Sync</li>
+              <li class="flex items-center gap-2.5">✓ Daily Slack Digest</li>
+              <li class="flex items-center gap-2.5 text-slate-600">✗ Custom ML Anomaly Models</li>
+            </ul>
+          </div>
+
+          <a href="#get-started" class="mt-8 block w-full py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-center font-semibold text-sm text-slate-200 hover:bg-slate-800 transition">
+            Start Free Trial
+          </a>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-2 border-cyan-400/80 rounded-2xl p-8 flex flex-col justify-between shadow-2xl shadow-cyan-500/10 scale-105 z-10">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 text-xs font-extrabold uppercase tracking-wider">
+            Most Popular
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white">Pro Velocity</h4>
+            <p class="text-xs text-slate-400 mt-1">For high-growth scale-ups shipping weekly</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-cyan-300 price-pro">$39</span>
+              <span class="text-xs text-slate-400 font-mono">/ member / mo</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Billed annually</p>
+
+            <ul class="mt-8 space-y-3.5 text-sm text-slate-200">
+              <li class="flex items-center gap-2.5 text-cyan-300">✓ Unlimited team members</li>
+              <li class="flex items-center gap-2.5">✓ Autonomous Blocker Interceptor</li>
+              <li class="flex items-center gap-2.5">✓ Verified Checkmark Assurance</li>
+              <li class="flex items-center gap-2.5">✓ Predictive Sprint Failure Radar</li>
+              <li class="flex items-center gap-2.5">✓ Linear & Jira Dual-way Sync</li>
+              <li class="flex items-center gap-2.5">✓ Priority 24/7 Support</li>
+            </ul>
+          </div>
+
+          <a href="#get-started" class="mt-8 block w-full py-3.5 rounded-xl bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-slate-950 font-bold text-center text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-[1.02] transition-all">
+            Get Pro Free for 14 Days
+          </a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+          <div>
+            <h4 class="text-lg font-bold text-white">Enterprise</h4>
+            <p class="text-xs text-slate-400 mt-1">For multi-squad engineering organizations</p>
+            <div class="mt-6 flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-white">Custom</span>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Tailored for your org</p>
+
+            <ul class="mt-8 space-y-3.5 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">✓ Everything in Pro</li>
+              <li class="flex items-center gap-2.5">✓ Dedicated Solution Architect</li>
+              <li class="flex items-center gap-2.5">✓ SSO & Okta SAML Integration</li>
+              <li class="flex items-center gap-2.5">✓ SOC2 & Custom Compliance SLAs</li>
+              <li class="flex items-center gap-2.5">✓ Self-hosted / VPC deployment</li>
+            </ul>
+          </div>
+
+          <a href="#get-started" class="mt-8 block w-full py-3 rounded-xl border border-slate-700 hover:border-slate-500 text-center font-semibold text-sm text-slate-200 hover:bg-slate-800 transition">
+            Talk to Enterprise Sales
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <!-- ========================================== -->
+  <section class="py-24 bg-gradient-to-b from-[#070b14] via-slate-950 to-[#070b14] border-t border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Frequently Asked Questions</h2>
+        <p class="mt-3 text-slate-400 text-base">Everything you need to know about PulsePM and how it fits into your stack.</p>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition">
+          <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:text-cyan-400 transition-colors">
+            <span>Does PulsePM replace Jira, Linear, or GitHub Projects?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-300 leading-relaxed hidden">
+            PulsePM can either serve as your complete modern standalone project hub OR layer right on top of Jira, Linear, and GitHub. You don't have to migrate or disrupt your existing ticket archives; PulsePM injects live telemetry and synchronization bi-directionally.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition">
+          <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:text-cyan-400 transition-colors">
+            <span>How does PulsePM detect blockers before standups happen?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-300 leading-relaxed hidden">
+            PulsePM monitors non-intrusive metadata: code changes touching shared module dependencies, PRs waiting on approvals past standard SLA thresholds, failed test suites, and unanswered questions in issue threads. When stagnation is detected, PulsePM alerts owners before it derails the sprint.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition">
+          <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:text-cyan-400 transition-colors">
+            <span>Is our proprietary source code stored or trained on?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-300 leading-relaxed hidden">
+            Never. PulsePM operates strictly on git metadata (commit messages, branch names, PR review status, timestamps, and test runner outputs). Your source code is never cached, stored, or used to train any public models. We are SOC 2 Type II compliant and offer VPC deployments for enterprise customers.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition">
+          <button class="w-full text-left p-5 flex items-center justify-between font-bold text-white text-base hover:text-cyan-400 transition-colors">
+            <span>What is the significance of the "Pulse" and the "Checkmark" logo?</span>
+            <svg class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-5 pb-5 text-sm text-slate-300 leading-relaxed hidden">
+            Our brand emblem synthesizes the letter 'P' with a medical-grade ECG heartbeat line and a verified deliverable checkmark. It symbolizes continuous real-time sprint health (the Pulse) paired with guaranteed completion and verification (the Checkmark).
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FINAL CALL TO ACTION -->
+  <!-- ========================================== -->
+  <section id="get-started" class="py-24 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="relative rounded-3xl bg-gradient-to-r from-teal-900/40 via-cyan-900/30 to-blue-900/40 border border-cyan-500/40 p-8 sm:p-14 text-center overflow-hidden shadow-2xl shadow-cyan-500/10">
+        
+        <!-- Ambient decoration -->
+        <div class="absolute -top-24 -right-24 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+          <div class="w-16 h-16 mx-auto rounded-2xl overflow-hidden shadow-xl border border-slate-700/60 p-1 bg-slate-900">
+            <img src="assets/logo.png" alt="PulsePM" class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Stop Guessing. <br/>
+            Start Tracking the Pulse.
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg">
+            Join over 1,200 forward-thinking teams shipping higher quality software without late-night sprint stress.
+          </p>
+
+          <!-- Input form -->
+          <form id="pilot-form" class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); showSuccessModal();">
+            <input type="email" required placeholder="Enter your work email" class="w-full px-4 py-3.5 rounded-xl bg-slate-950/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 text-sm">
+            <button type="submit" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 font-bold text-sm hover:opacity-95 transition-all whitespace-nowrap shadow-lg shadow-cyan-500/25">
+              Get Started Free
+            </button>
+          </form>
+
+          <p class="text-xs text-slate-400 font-mono">Free 14-day trial • No credit card required • Instant GitHub integration</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER -->
+  <!-- ========================================== -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-16 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10 pb-12 border-b border-slate-900">
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg overflow-hidden border border-slate-800">
+              <img src="assets/logo.png" alt="PulsePM" class="w-full h-full object-cover">
+            </div>
+            <span class="text-lg font-bold text-white">Pulse<span class="text-cyan-400">PM</span></span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            The intelligent real-time sprint telemetry platform. Bringing predictive cardiac-grade rhythm and verified checkmarks to modern engineering organizations.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>All Telemetry Systems Operational</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Platform -->
+        <div>
+          <h5 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Platform</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-cyan-400 transition-colors">About Platform</a></li>
+            <li><a href="#interactive-simulator" class="hover:text-cyan-400 transition-colors">Sprint Cardiogram</a></li>
+            <li><a href="#features" class="hover:text-cyan-400 transition-colors">Blocker Interceptor</a></li>
+            <li><a href="#features" class="hover:text-cyan-400 transition-colors">Verified Deliverables</a></li>
+            <li><a href="#pricing" class="hover:text-cyan-400 transition-colors">Integrations Catalog</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div>
+          <h5 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Resources</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Documentation</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">API Reference</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Sprint Health Benchmarks</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">SOC2 Security Whitepaper</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Customer Stories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Company -->
+        <div>
+          <h5 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Company</h5>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Careers (We're Hiring!)</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 PulsePM Technologies, Inc. All rights reserved.</p>
+        <p class="font-mono">Designed for velocity. Built for confidence.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Success Modal for Pilot Form -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl text-center space-y-4 animate-in">
+      <div class="w-14 h-14 rounded-full bg-teal-500/20 text-teal-400 border border-teal-500/40 flex items-center justify-center mx-auto text-2xl font-bold">
+        ✓
+      </div>
+      <h3 class="text-2xl font-bold text-white">Welcome to PulsePM!</h3>
+      <p class="text-slate-300 text-sm">
+        We've sent a magic activation link to your email. You're ready to connect your first repository and monitor your team's live heartbeat.
+      </p>
+      <button onclick="closeSuccessModal()" class="w-full py-3 rounded-xl bg-gradient-to-r from-teal-400 to-cyan-500 text-slate-950 font-bold text-sm hover:opacity-90 transition">
+        Continue to Workspace
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
