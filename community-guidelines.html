@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Community Guidelines for PulsePM — Unified Project Management Platform by Synerbit (OPC) Pvt Ltd.">
+  <title>Community Guidelines — PulsePM</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .guideline-section {
+      scroll-margin-top: 100px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.8);
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #00e5a3;
+    }
+    .toc-link.active {
+      color: #00e5a3;
+      background-color: rgba(0, 229, 163, 0.1);
+      border-color: rgba(0, 229, 163, 0.3);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-[#070b14] text-slate-200 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-300 min-h-screen antialiased">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] pointer-events-none z-0 overflow-hidden opacity-50">
+    <div class="absolute -top-32 left-1/4 w-[500px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/15 to-indigo-600/10 rounded-full blur-[140px]"></div>
+    <div class="absolute top-10 right-1/4 w-[450px] h-[300px] bg-gradient-to-bl from-teal-400/10 via-blue-500/15 to-sky-400/10 rounded-full blur-[120px]"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#070b14]/85 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <div class="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-blue-500/20 border border-slate-700/50 group-hover:border-cyan-400/50 transition-all duration-300">
+            <img src="assets/logo.png" alt="PulsePM Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">Pulse<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">PM</span></span>
+            </div>
+            <span class="text-[11px] text-slate-400 tracking-tight font-medium -mt-0.5">Unified Project Management Platform</span>
+          </div>
+        </a>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-300 hover:text-white px-4 py-2 rounded-lg border border-slate-800 hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+          <a href="https://app.pulsepm.in" class="relative group inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs sm:text-sm font-semibold shadow-md hover:scale-[1.02] transition-all">
+            <span>Launch App</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    
+    <!-- Title Card -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-10 mb-10 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        Community & Conduct
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Community Guidelines</h1>
+      <p class="text-slate-300 text-base sm:text-lg mt-3 font-medium">
+        PulsePM — Unified Project Management Platform <br class="hidden sm:inline"/>
+        <span class="text-slate-400 text-sm">Operated by Synerbit (OPC) Private Limited</span>
+      </p>
+
+      <div class="mt-6 pt-6 border-t border-slate-800/80 flex flex-wrap gap-6 sm:gap-10 text-xs font-mono text-slate-400">
+        <div>
+          <span class="text-slate-500 block">EFFECTIVE DATE</span>
+          <span class="text-cyan-400 font-bold">September 27, 2026</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">LAST UPDATED</span>
+          <span class="text-teal-400 font-bold">September 27, 2026</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">SCOPE</span>
+          <span class="text-slate-300 font-medium">All PulsePM Users & Workspaces</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">JURISDICTION</span>
+          <span class="text-slate-300 font-medium">Ahmedabad, Gujarat, India</span>
+        </div>
+      </div>
+
+      <!-- Welcome Message Callout -->
+      <div class="mt-6 p-5 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm leading-relaxed space-y-2">
+        <p class="font-bold text-white text-sm sm:text-base flex items-center gap-2">
+          <span>💬</span> A Message From Our Team
+        </p>
+        <p>
+          At PulsePM, we believe that great work is built on great teams — and great teams are built on trust, respect, and clear communication. Our platform exists to help individuals and organisations manage their projects and tasks efficiently, collaborate in real time, and achieve their goals together.
+        </p>
+        <p>
+          These Community Guidelines exist to ensure that PulsePM remains a safe, professional, and productive environment for every person who uses it — whether they are a project owner managing a team, a contributor working on assigned tasks, or a collaborator joining a shared workspace.
+        </p>
+        <p class="text-cyan-300 font-medium">
+          We ask every user to read, understand, and commit to these guidelines. By using PulsePM, you agree to uphold these standards in every interaction you have on the platform.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2-Column Split: Fixed Quick Jump on LEFT, Content Stream on RIGHT -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+      
+      <!-- ============================================== -->
+      <!-- LEFT COLUMN: Fixed / Sticky Quick Jump Navigation -->
+      <!-- ============================================== -->
+      <aside class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 z-20">
+        
+        <!-- Mobile Dropdown / Collapsible for Quick Jump -->
+        <div class="lg:hidden mb-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+          <details class="group">
+            <summary class="flex items-center justify-between font-bold text-sm text-cyan-400 cursor-pointer list-none">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                <span>Jump to Section (1 — 14)</span>
+              </span>
+              <span class="transition-transform group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="mt-4 pt-3 border-t border-slate-800 max-h-64 overflow-y-auto space-y-1 text-xs">
+              <a href="#sec-1" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">1. Who These Guidelines Apply To</a>
+              <a href="#sec-2" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">2. Our Core Values</a>
+              <a href="#sec-3" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">3. Professional Conduct</a>
+              <a href="#sec-4" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">4. Collaboration Etiquette</a>
+              <a href="#sec-5" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">5. Role-Specific Responsibilities</a>
+              <a href="#sec-6" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">6. Content Standards</a>
+              <a href="#sec-7" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">7. Privacy & Data Responsibility</a>
+              <a href="#sec-8" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">8. Fair Use of the Platform</a>
+              <a href="#sec-9" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">9. Reporting Violations</a>
+              <a href="#sec-10" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">10. Enforcement</a>
+              <a href="#sec-11" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">11. Appeals Process</a>
+              <a href="#sec-12" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">12. Changes to Guidelines</a>
+              <a href="#sec-13" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">13. Grievance Redressal</a>
+              <a href="#sec-14" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">14. Related Policies</a>
+            </div>
+          </details>
+        </div>
+
+        <!-- Desktop Quick Jump Sticky Box -->
+        <div class="hidden lg:block bg-slate-900/90 border border-slate-800/90 rounded-2xl p-5 shadow-xl backdrop-blur-xl">
+          <div class="flex items-center gap-2 pb-3 mb-3 border-b border-slate-800">
+            <svg class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+            <h3 class="font-bold text-white text-sm uppercase tracking-wider">Quick Navigation</h3>
+          </div>
+          
+          <div class="overflow-y-auto max-h-[calc(100vh-190px)] pr-2 space-y-1 text-xs custom-scrollbar">
+            <a href="#sec-1" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">1. Who These Guidelines Apply To</a>
+            <a href="#sec-2" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">2. Our Core Values</a>
+            <a href="#sec-3" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">3. Professional Conduct</a>
+            <a href="#sec-4" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">4. Collaboration Etiquette</a>
+            <a href="#sec-5" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">5. Role Responsibilities</a>
+            <a href="#sec-6" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">6. Content Standards</a>
+            <a href="#sec-7" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">7. Privacy & Data Responsibility</a>
+            <a href="#sec-8" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">8. Fair Use of Platform</a>
+            <a href="#sec-9" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">9. Reporting Violations</a>
+            <a href="#sec-10" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">10. Enforcement Actions</a>
+            <a href="#sec-11" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">11. Appeals Process</a>
+            <a href="#sec-12" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">12. Changes to Guidelines</a>
+            <a href="#sec-13" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">13. Grievance Redressal</a>
+            <a href="#sec-14" class="toc-link block py-1.5 px-3 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition-all border border-transparent">14. Related Policies</a>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-slate-800/80 text-[11px] text-slate-400">
+            <p>Questions about conduct?</p>
+            <a href="mailto:contact@pulsepm.in" class="text-teal-400 hover:underline font-mono">contact@pulsepm.in</a>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ============================================== -->
+      <!-- RIGHT COLUMN: Main Content Stream Cards -->
+      <!-- ============================================== -->
+      <div class="lg:col-span-8 xl:col-span-9 space-y-10">
+
+        <!-- Section 1 -->
+        <section id="sec-1" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 01</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Who These Guidelines Apply To</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              These guidelines apply to every person who uses PulsePM, regardless of:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-300">
+              <li><strong>Their role:</strong> Owner, Admin, Contributor, or Viewer</li>
+              <li><strong>The type of project they are part of:</strong> Personal, team, or organisational</li>
+              <li><strong>The device they use:</strong> Web application at <a href="https://app.pulsepm.in" class="text-cyan-400 underline font-medium">app.pulsepm.in</a> or the mobile application</li>
+              <li><strong>User identity:</strong> Whether they are an individual user or representing an organisation</li>
+            </ul>
+            <p class="pt-2 font-medium text-white">
+              These guidelines apply to all interactions and content within PulsePM, including but not limited to:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">Project Workspaces</span>
+                Project names, descriptions, priorities, milestones, and workspace settings.
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">Tasks & Subtasks</span>
+                Titles, descriptions, statuses, priorities, checklist items, and due dates.
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">Comments & Discussions</span>
+                All task-level comments, progress notes, and squad discussions.
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">@Mentions & Tags</span>
+                Tagging other members in comments, blockers, or task descriptions.
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">Invitations</span>
+                Inviting internal colleagues and external collaborators to join projects.
+              </div>
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+                <span class="text-teal-400 font-bold block mb-1">Member Profiles & Notifications</span>
+                Display names, avatars, role designations, and triggered alert tones.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section id="sec-2" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 02</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Our Core Values</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              PulsePM's community is built on five core values that underpin every feature and interaction across the platform:
+            </p>
+            <div class="space-y-4">
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90">
+                <div class="flex items-center gap-2.5 text-white font-bold text-base mb-1.5">
+                  <span class="text-lg">🤝</span> Respect
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Every person using PulsePM — regardless of their designation, experience, organisation size, or background — deserves to be treated with dignity and respect. There is no place for disrespect of any kind on this platform.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90">
+                <div class="flex items-center gap-2.5 text-white font-bold text-base mb-1.5">
+                  <span class="text-lg">🎯</span> Accountability
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Take ownership of your tasks, your comments, and your actions within a project. Accountability is the foundation of effective teamwork.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90">
+                <div class="flex items-center gap-2.5 text-white font-bold text-base mb-1.5">
+                  <span class="text-lg">💬</span> Clear Communication
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Good project management depends on clear, honest, and timely communication. Say what you mean, be constructive in your feedback, and keep others informed of your progress.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90">
+                <div class="flex items-center gap-2.5 text-white font-bold text-base mb-1.5">
+                  <span class="text-lg">🔒</span> Privacy and Confidentiality
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Respect the privacy of your team members and the confidentiality of project data. What is shared within a project workspace is shared in trust.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90">
+                <div class="flex items-center gap-2.5 text-white font-bold text-base mb-1.5">
+                  <span class="text-lg">🌱</span> Continuous Improvement
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  Use PulsePM as a tool for growth — for yourself, your team, and your projects. Give constructive feedback, accept it gracefully, and always look for ways to improve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section id="sec-3" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 03</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Professional Conduct</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              PulsePM is a professional project management platform. All interactions must reflect the standards expected in a workplace environment.
+            </p>
+            
+            <div class="space-y-4">
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm sm:text-base font-bold text-teal-400 mb-2">3.1 Be Respectful at All Times</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-300">
+                  <li>Address other project members professionally and courteously at all times.</li>
+                  <li>Disagreements about tasks, deadlines, or project direction should be handled respectfully and constructively.</li>
+                  <li>Differences in opinion are natural in any team; express your views without attacking or belittling others.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm sm:text-base font-bold text-teal-400 mb-2">3.2 Be Punctual and Reliable</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-300">
+                  <li>Complete tasks assigned to you within the agreed timelines.</li>
+                  <li>If you are unable to meet a deadline, communicate proactively — update the task status, leave a comment explaining the situation, and notify the relevant project admin or owner.</li>
+                  <li>Do not leave tasks unacknowledged or silently abandon assignments without informing your project team.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm sm:text-base font-bold text-teal-400 mb-2">3.3 Be Honest</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-300">
+                  <li>Accurately represent the status of your work. Do not mark a task as "Completed" or "In Review" if it is not.</li>
+                  <li>Do not misrepresent your identity, role, qualifications, or organisational affiliation within the platform.</li>
+                  <li>Do not fabricate or falsify project data, task logs, or activity histories.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm sm:text-base font-bold text-teal-400 mb-2">3.4 Respect Others' Time</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-300">
+                  <li>Keep comments concise, relevant, and purposeful.</li>
+                  <li>Use @mentions thoughtfully — only tag a member when their attention is genuinely required.</li>
+                  <li>Avoid unnecessary notifications that distract team members from their work.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section id="sec-4" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 04</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Collaboration Etiquette</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              Collaboration is at the heart of PulsePM. How you work with others matters as much as the work itself.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.1 Task Assignment</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Assign tasks only to members who have the ability and bandwidth to complete them.</li>
+                  <li>Provide sufficient context — clear description, realistic due date, and expected outcome.</li>
+                  <li>Assignees must acknowledge assignments and ask clarifying questions promptly.</li>
+                  <li>Do not reassign tasks without proper communication and legitimate project authority.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.2 Subtasks</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Break large tasks into subtasks to make work manageable and progress trackable.</li>
+                  <li>Keep subtask names clear and specific — avoid vague descriptions like "do this" or "fix it".</li>
+                  <li>Complete subtasks in a logical sequence and update their status honestly as you progress.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.3 Comments & Discussions</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Use the task comment section exclusively for work-related discussions.</li>
+                  <li>Keep comments factual, constructive, and professional.</li>
+                  <li>Focus feedback on the work itself — never the person.</li>
+                  <li>Do not use comments for personal chats or airing personal grievances.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.4 @Mentions</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Use @mentions only to direct a specific question to the relevant team member.</li>
+                  <li>Do not spam or flood members with unnecessary notifications.</li>
+                  <li>Never use @mentions to single out, embarrass, pressure, or publicly criticise anyone.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.5 Project Invitations</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Only invite people who have a legitimate role to play in the workspace.</li>
+                  <li>Never add unauthorised individuals to confidential or sensitive projects.</li>
+                  <li>Respect invitees who decline or do not respond to an invitation.</li>
+                  <li>Do not share invite codes publicly or with unintended collaborators.</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+                <h4 class="text-sm font-bold text-cyan-400">4.6 Status Updates</h4>
+                <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+                  <li>Maintain timely transitions: <em>To Do → In Progress → In Review → Completed</em>.</li>
+                  <li>Accurate updates give teams a dependable real-time picture of project health.</li>
+                  <li>Never manipulate or falsify statuses to create a misleading impression of progress.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section id="sec-5" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 05</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Role-Specific Responsibilities</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              Every role within a PulsePM project carries specific responsibilities. All members are expected to operate within the boundaries of their assigned role:
+            </p>
+
+            <!-- 5.1 Project Owner -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/90 space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/10 text-amber-400 border border-amber-500/30">Owner Role</span>
+                <h4 class="text-base font-bold text-white">5.1 Project Owner</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300">
+                The Project Owner has the highest level of authority within a project. With this authority comes the greatest responsibility:
+              </p>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Set the tone:</strong> Conduct sets the standard for the entire team. Model professional behaviour.
+                </li>
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Communicate clearly:</strong> Ensure project goals, deadlines, and expectations are clearly defined.
+                </li>
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Assign fairly:</strong> Distribute tasks equitably based on member capacity and expertise.
+                </li>
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Support your team:</strong> Remain available to resolve blockers, answer questions, and provide guidance.
+                </li>
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Respect member privacy:</strong> Do not misuse access to member personal data or contact details.
+                </li>
+                <li class="p-2.5 bg-slate-900/50 rounded-xl border border-slate-850">
+                  <strong class="text-amber-300 block mb-0.5">Remove harmful members:</strong> If a member violates guidelines, revoke workspace access promptly.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 5.2 Project Admin -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/90 space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">Admin Role</span>
+                <h4 class="text-base font-bold text-white">5.2 Project Admin</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Project Admins assist the Owner in managing projects:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>Manage task assignments, priorities, and project settings responsibly.</li>
+                <li>Exercise administrative privileges (reassigning tasks, changing states) only when genuinely necessary.</li>
+                <li>Do not abuse administrative access to override or undo another member's legitimate work without cause.</li>
+                <li>Communicate administrative decisions transparently to the team.</li>
+              </ul>
+            </div>
+
+            <!-- 5.3 Contributors -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800/90 space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-teal-500/10 text-teal-400 border border-teal-500/30">Contributor Role</span>
+                <h4 class="text-base font-bold text-white">5.3 Contributors (Members)</h4>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Contributors are the core of every project team:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>Focus on delivering quality work within agreed timelines.</li>
+                <li>Communicate openly about progress, blockers, and dependencies.</li>
+                <li>Raise concerns or disagreements through appropriate channels — comments, direct messages to the project admin, or PulsePM support.</li>
+                <li>Do not attempt to access project features or data beyond your assigned role permissions.</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section id="sec-6" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 06</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Content Standards</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              All content created within PulsePM — whether in project names, task descriptions, comments, subtasks, or any other field — must meet these standards:
+            </p>
+
+            <div class="p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 space-y-2">
+              <h4 class="text-emerald-400 font-bold text-sm flex items-center gap-2">
+                <span>✓</span> 6.1 Permitted Content
+              </h4>
+              <ul class="list-disc pl-5 space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>Work-related descriptions, instructions, feedback, and deliverables.</li>
+                <li>Professional questions, clarifications, and requirements scoping.</li>
+                <li>Constructive feedback on tasks, deliverables, or team project processes.</li>
+                <li>Status updates, progress notes, blockers, and completion confirmations.</li>
+                <li>Links to legitimate work-related resources (documents, repositories, specifications).</li>
+              </ul>
+            </div>
+
+            <div class="space-y-3">
+              <h4 class="text-red-400 font-bold text-sm flex items-center gap-2">
+                <span>✕</span> 6.2 Prohibited Content
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-400">
+                The following types of content are strictly prohibited across all PulsePM services:
+              </p>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950 text-slate-300 border-b border-slate-800 uppercase text-[11px] tracking-wider">
+                    <tr>
+                      <th class="p-3.5 sm:p-4 font-bold text-cyan-400 w-1/3">Category</th>
+                      <th class="p-3.5 sm:p-4 font-bold text-slate-200">Examples & Prohibitions</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-850 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Hateful content</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Content that demeans or attacks individuals based on caste, religion, gender, race, nationality, disability, sexual orientation, or any protected characteristic.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Harassment and bullying</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Targeted, repeated hostile or demeaning comments directed at any individual.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Threats and intimidation</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Any content that threatens harm, coercion, or retaliation against any person.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Obscene or explicit content</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Sexually explicit material, graphic violence, or other content inappropriate for a professional environment.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Defamatory content</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">False statements of fact presented as true that damage a person's or organisation's reputation.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Spam</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Repetitive, irrelevant, or unsolicited bulk promotional content.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Misinformation</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Deliberately false or misleading information intended to deceive.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Personally identifiable info (PII)</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Posting another person's private info — phone numbers, personal addresses, Aadhaar / ID details, or financial data — without explicit consent.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Illegal content</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Content that promotes, glorifies, or facilitates illegal activities under Indian law.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 sm:p-4 font-semibold text-white">Intellectual property violations</td>
+                      <td class="p-3.5 sm:p-4 text-slate-300">Content that infringes third-party copyrights, trademarks, or proprietary trade secrets.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="sec-7" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 07</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Privacy and Data Responsibility</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              Every member of a PulsePM project handles data that may be sensitive, confidential, or proprietary. You have a responsibility to handle this data with care:
+            </p>
+            <div class="space-y-3">
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-1.5">
+                <h4 class="text-sm font-bold text-teal-400">7.1 Respect Confidentiality</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Treat all project data — including project names, task details, timelines, member information, and business data — as strictly confidential to the project team. Do not share project data, screenshots, or internal metrics with unauthorised individuals outside the project. Do not extract project data for unrelated purposes.
+                </p>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-1.5">
+                <h4 class="text-sm font-bold text-teal-400">7.2 Do Not Share Others' Personal Information</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Do not post, expose, or share any team member's personal information (such as personal email address, phone number, home address, or financial details) without their explicit consent. Do not use information about fellow project members obtained through the platform for any purpose outside the scope of the project.
+                </p>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-1.5">
+                <h4 class="text-sm font-bold text-teal-400">7.3 Respect Platform Privacy Settings</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  Do not attempt to bypass, circumvent, or exploit the platform's role-based access controls to view or modify data you are not authorised to access. If you accidentally access data beyond your authorised scope, report it to the Project Owner or to PulsePM immediately.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 8 -->
+        <section id="sec-8" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 08</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Fair Use of the Platform</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              To ensure a reliable and fair experience for all users, you agree to use PulsePM responsibly:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-300">
+              <li>Do not create multiple accounts to circumvent restrictions, bans, or usage limitations.</li>
+              <li>Do not attempt to stress-test, probe, scan, or overload the platform's servers, databases, or APIs.</li>
+              <li>Do not use automated bots, scripts, spiders, or scrapers to create projects, tasks, or comments in bulk.</li>
+              <li>Do not use the platform for purposes unrelated to project and task management (e.g., as an unmonitored mass-messaging platform, personal file dump, or advertising tool).</li>
+              <li>Do not use PulsePM to conduct, facilitate, or promote any unlawful business activity.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="sec-9" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 09</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Reporting Violations</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              We rely on our community to help us maintain a safe and respectful platform. If you witness or experience conduct that violates these Community Guidelines, we encourage you to report it.
+            </p>
+
+            <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+              <h4 class="text-sm font-bold text-cyan-400">9.1 What to Report</h4>
+              <ul class="list-disc pl-4 space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>Harassment, abuse, discriminatory remarks, or threats from another user</li>
+                <li>Inappropriate, explicit, or offensive content in tasks, comments, or project titles</li>
+                <li>A user impersonating someone else or falsifying team affiliations</li>
+                <li>Suspected fraudulent or illegal activity on the platform</li>
+                <li>A security vulnerability, role bypass, or breach of data privacy</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold text-white mb-3">9.2 How to Report (Graduated Procedure)</h4>
+              <div class="space-y-3 text-xs sm:text-sm">
+                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-850">
+                  <strong class="text-teal-400 block mb-1">Step 1 — Document the Incident</strong>
+                  Note the details of the violation: the project name, task name, comment or content in question, date and time, and the username / email of the person involved.
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-850">
+                  <strong class="text-teal-400 block mb-1">Step 2 — Contact Project Owner or Admin (Internal Disputes)</strong>
+                  If the issue involves another member within your project, you may first raise it with your Project Owner or Admin, who has the authority to take corrective action within the project workspace.
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-850">
+                  <strong class="text-teal-400 block mb-1">Step 3 — Contact PulsePM Directly (Escalated Safety Concerns)</strong>
+                  For serious violations, safety concerns, or issues not resolved at the project level, contact us directly:
+                  <div class="mt-2 pt-2 border-t border-slate-800 text-xs font-mono space-y-1">
+                    <p><span class="text-slate-400">📧 Email:</span> <a href="mailto:contact@pulsepm.in" class="text-cyan-400 underline font-bold">contact@pulsepm.in</a></p>
+                    <p><span class="text-slate-400">Subject Line:</span> Community Guidelines Violation Report</p>
+                    <p><span class="text-slate-400">Include:</span> Description of the incident, relevant screenshots or log evidence, and your registered account details.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-xs sm:text-sm space-y-1.5 text-cyan-200">
+              <strong class="text-white block font-bold">9.3 Good-Faith Reporting & Confidentiality</strong>
+              <p>
+                All reports must be made in good faith. Filing a false, exaggerated, or malicious report against another user is itself a violation of these guidelines and may result in disciplinary action against your account.
+              </p>
+              <p>
+                We keep all violation reports strictly confidential. We will never disclose the identity of the person who filed a report to the reported user.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 10 -->
+        <section id="sec-10" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 10</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Enforcement</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              We take violations of these Community Guidelines seriously. Our enforcement approach is graduated and proportional to the nature and severity of the violation.
+            </p>
+
+            <div>
+              <h4 class="text-sm font-bold text-white mb-2">10.1 Graduated Enforcement Actions</h4>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950 text-slate-300 border-b border-slate-800 uppercase text-[11px] tracking-wider">
+                    <tr>
+                      <th class="p-3.5 font-bold text-cyan-400 w-1/3">Severity</th>
+                      <th class="p-3.5 font-bold text-slate-200">Enforcement Action Taken</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-850 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-slate-300">Minor / First-time violation</td>
+                      <td class="p-3.5 text-slate-300">Written warning sent to the account via email.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-amber-300">Moderate violation</td>
+                      <td class="p-3.5 text-slate-300">Temporary restriction of specific platform features (e.g., commenting, creating projects).</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-orange-400">Serious violation</td>
+                      <td class="p-3.5 text-slate-300">Temporary suspension of the account.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-red-400">Severe or repeated violations</td>
+                      <td class="p-3.5 text-slate-300">Permanent termination of the account with no right to re-register.</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-red-500 font-bold">Illegal conduct</td>
+                      <td class="p-3.5 text-slate-300">Reporting to appropriate law enforcement authorities in India and permanent account ban.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm font-bold text-amber-400 mb-1">10.2 Immediate Suspension</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  We reserve the right to immediately suspend or terminate any account without prior warning if the violation involves:
+                </p>
+                <ul class="list-disc pl-5 mt-2 space-y-1 text-xs text-slate-400">
+                  <li>Threats of violence or physical harm to any person</li>
+                  <li>Sharing of illegal content (as defined under the IT Act, 2000)</li>
+                  <li>Wilful breach of data privacy or platform security infrastructure</li>
+                  <li>Ongoing harassment despite a prior written warning</li>
+                  <li>Any activity that jeopardises the safety or integrity of the platform or its users</li>
+                </ul>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm font-bold text-slate-200 mb-1">10.3 Content Removal</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  We reserve the right to remove any content — including project names, task descriptions, files, or comments — that violates these guidelines, without prior notice and at our sole discretion.
+                </p>
+              </div>
+
+              <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800">
+                <h4 class="text-sm font-bold text-slate-200 mb-1">10.4 No Obligation to Monitor</h4>
+                <p class="text-xs sm:text-sm text-slate-300">
+                  While we are committed to enforcing these guidelines, we are not obligated to proactively monitor all content on the platform. Enforcement is primarily complaint-driven and discovery-based.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 11 -->
+        <section id="sec-11" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 11</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Appeals</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              If your account has been suspended or terminated and you believe the action was taken in error, you may appeal the decision.
+            </p>
+
+            <div class="p-4 bg-slate-950/60 rounded-2xl border border-slate-800 space-y-2">
+              <h4 class="text-sm font-bold text-teal-400">11.1 How to Appeal</h4>
+              <p class="text-xs sm:text-sm text-slate-300">Submit an appeal by emailing our review desk:</p>
+              <div class="text-xs font-mono bg-slate-900/80 p-3 rounded-xl border border-slate-800 space-y-1">
+                <p><span class="text-slate-400">📧 Email:</span> <a href="mailto:contact@pulsepm.in" class="text-cyan-400 underline font-bold">contact@pulsepm.in</a></p>
+                <p><span class="text-slate-400">Subject Line:</span> Account Action Appeal — [Your Registered Email Address]</p>
+                <p><span class="text-slate-400">Include:</span> Clear explanation of why you believe the action was incorrect, any supporting evidence, and your registered account details.</p>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold text-white mb-2">11.2 Appeal Review Process & Timelines</h4>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950 text-slate-300 border-b border-slate-800 uppercase text-[11px] tracking-wider">
+                    <tr>
+                      <th class="p-3.5 font-bold text-cyan-400">Review Stage</th>
+                      <th class="p-3.5 font-bold text-slate-200">Statutory / Platform Timeframe</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-850 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-white">Acknowledgement of appeal</td>
+                      <td class="p-3.5 text-slate-300">Within 3 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-white">Review and investigation</td>
+                      <td class="p-3.5 text-slate-300">Within 15 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-medium text-white">Final decision communicated</td>
+                      <td class="p-3.5 text-slate-300">Within 20 business days of submission</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950 border border-slate-850 text-xs text-slate-400">
+              <strong class="text-slate-200 block mb-1">11.3 Final Decision</strong>
+              The decision made upon appeal is final. We will not re-review the same incident a second time unless significant and verifiable new evidence is provided.
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section 12 -->
+        <section id="sec-12" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 12</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Changes to These Guidelines</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              We may update these Community Guidelines from time to time to reflect changes in platform features, community needs, or applicable laws. When we make significant changes, we will:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-300">
+              <li>Update the "Last Updated" date at the top of this document</li>
+              <li>Display a notice on the Platform or dashboard</li>
+              <li>Notify users by email for material changes</li>
+            </ul>
+            <p class="pt-2 text-xs sm:text-sm text-slate-400">
+              Your continued use of PulsePM after the updated guidelines take effect constitutes your acceptance of the changes.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 13 -->
+        <section id="sec-13" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 13</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Contact and Grievance Redressal</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-5">
+            <p>
+              If you have any questions about these guidelines, wish to report a violation, or wish to raise a concern regarding enforcement, please contact our Grievance Officer designated in accordance with the Information Technology Act, 2000:
+            </p>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950 text-slate-300 border-b border-slate-800 uppercase text-[11px] tracking-wider">
+                  <tr>
+                    <th class="p-3.5 font-bold text-cyan-400 w-1/3">Detail</th>
+                    <th class="p-3.5 font-bold text-slate-200">Information</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-850 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Name</td>
+                    <td class="p-3.5 text-slate-300">Rajeev Ranjan Kumar</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Designation</td>
+                    <td class="p-3.5 text-slate-300">Grievance Officer</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Company</td>
+                    <td class="p-3.5 text-slate-300">Synerbit (OPC) Private Limited</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Email</td>
+                    <td class="p-3.5"><a href="mailto:contact@pulsepm.in" class="text-cyan-400 hover:underline">contact@pulsepm.in</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Platform URL</td>
+                    <td class="p-3.5"><a href="https://app.pulsepm.in" class="text-cyan-400 hover:underline">app.pulsepm.in</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Registered Office</td>
+                    <td class="p-3.5 text-slate-300">Block-A, 606 Prahladnagar Trade Center, B/H Titanium City Center, Vejalpur, Ahmedabad, Gujarat — 380051, India</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Response Time</td>
+                    <td class="p-3.5 text-teal-400 font-medium">Within 30 days of receiving a complaint</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 14 -->
+        <section id="sec-14" class="guideline-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 14</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Related Policies</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+            <p>
+              These Community Guidelines should be read alongside the following documents, all of which form part of your agreement with PulsePM:
+            </p>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950 text-slate-300 border-b border-slate-800 uppercase text-[11px] tracking-wider">
+                  <tr>
+                    <th class="p-3.5 font-bold text-cyan-400 w-1/3">Document</th>
+                    <th class="p-3.5 font-bold text-slate-200">Location</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-850 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Privacy Policy</td>
+                    <td class="p-3.5"><a href="privacy.html" class="text-cyan-400 hover:underline">pulsepm.in/privacy.html</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Terms and Conditions</td>
+                    <td class="p-3.5"><a href="terms.html" class="text-cyan-400 hover:underline">pulsepm.in/terms.html</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Refund Policy</td>
+                    <td class="p-3.5"><a href="refund.html" class="text-cyan-400 hover:underline">pulsepm.in/refund.html</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-teal-500/10 to-blue-500/10 border border-teal-500/30 text-teal-200 text-xs sm:text-sm leading-relaxed">
+              Together, we can build a community where every person feels valued, every team works at its best, and every project reaches its full potential. Thank you for being a part of <strong>PulsePM</strong>.
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- Back to top / return button -->
+    <div class="mt-16 pt-8 border-t border-slate-800/80 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-sm transition-all shadow-lg">
+        <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Back to PulsePM Home</span>
+      </a>
+      <a href="terms.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-slate-600 text-slate-300 text-sm transition-all">
+        <span>View Terms & Conditions →</span>
+      </a>
+      <a href="privacy.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 border border-slate-800 hover:border-slate-600 text-slate-300 text-sm transition-all">
+        <span>View Privacy Policy →</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-7 h-7 rounded-lg overflow-hidden border border-slate-800">
+            <img src="assets/logo.png" alt="PulsePM" class="w-full h-full object-cover">
+          </div>
+          <span class="text-sm font-bold text-white">Pulse<span class="text-cyan-400">PM</span></span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-500">By Synerbit (OPC) Private Limited</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+          <a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+          <a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms and Conditions</a>
+          <a href="community-guidelines.html" class="text-cyan-400 font-medium transition-colors">Community Guidelines</a>
+          <a href="mailto:contact@pulsepm.in" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-6 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+        <p>© 2026 Synerbit (OPC) Private Limited. All rights reserved.</p>
+        <p class="font-mono">Ahmedabad, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Active TOC ScrollSpy Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.guideline-section');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            tocLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+                link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-100px 0px -60% 0px'
+      });
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
