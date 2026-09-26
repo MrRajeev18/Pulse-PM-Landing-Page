@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acceptable Use Policy for PulsePM — Unified Project Management Platform by Synerbit (OPC) Pvt Ltd.">
+  <title>Acceptable Use Policy — PulsePM</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#151f32'
+            },
+            brand: {
+              teal: '#00e5a3',
+              cyan: '#00d2ff',
+              blue: '#1e6bff',
+              dark: '#070b14',
+              card: '#0c1220'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .aup-section {
+      scroll-margin-top: 100px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.8);
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #00e5a3;
+    }
+    .toc-link.active {
+      color: #00e5a3;
+      background-color: rgba(0, 229, 163, 0.1);
+      border-color: rgba(0, 229, 163, 0.3);
+      font-weight: 600;
+    }
+  </style>
+  <script>
+    if (window.location.pathname.endsWith('/acceptable-use-policy.html')) {
+      window.history.replaceState(null, '', '/acceptable-use-policy' + (window.location.search || '') + (window.location.hash || ''));
+    }
+  </script>
+</head>
+<body class="bg-[#070b14] text-slate-200 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-300 min-h-screen antialiased">
+
+  <!-- Ambient Glow Effects -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] pointer-events-none z-0 overflow-hidden opacity-50">
+    <div class="absolute -top-32 left-1/4 w-[500px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/15 to-indigo-600/10 rounded-full blur-[140px]"></div>
+    <div class="absolute top-10 right-1/4 w-[450px] h-[300px] bg-gradient-to-bl from-teal-400/10 via-blue-500/15 to-sky-400/10 rounded-full blur-[120px]"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#070b14]/85 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo -->
+        <a href="/" class="flex items-center gap-3.5 group">
+          <div class="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-blue-500/20 border border-slate-700/50 group-hover:border-cyan-400/50 transition-all duration-300">
+            <img src="assets/logo.png" alt="PulsePM Logo" class="w-full h-full object-cover">
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">Pulse<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">PM</span></span>
+            </div>
+            <span class="text-[11px] text-slate-400 tracking-tight font-medium -mt-0.5">Unified Project Management Platform</span>
+          </div>
+        </a>
+
+        <!-- Header Actions -->
+        <div class="flex items-center gap-3">
+          <a href="/" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-slate-300 hover:text-white px-4 py-2 rounded-lg border border-slate-800 hover:border-slate-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Back to Home</span>
+          </a>
+          <a href="https://app.pulsepm.in" class="relative group inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs sm:text-sm font-semibold shadow-md hover:scale-[1.02] transition-all">
+            <span>Launch App</span>
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    
+    <!-- Title Card -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-10 mb-10 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        Platform Governance & Security
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Acceptable Use Policy</h1>
+      <p class="text-slate-300 text-base sm:text-lg mt-3 font-medium">
+        PulsePM — Unified Project Management Platform <br class="hidden sm:inline"/>
+        <span class="text-slate-400 text-sm">Operated by Synerbit (OPC) Private Limited</span>
+      </p>
+
+      <div class="mt-6 pt-6 border-t border-slate-800 flex flex-wrap gap-6 sm:gap-10 text-xs font-mono text-slate-400">
+        <div>
+          <span class="text-slate-500 block">EFFECTIVE DATE</span>
+          <span class="text-cyan-400 font-bold">September 27, 2026</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">LAST UPDATED</span>
+          <span class="text-teal-400 font-bold">September 27, 2026</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">GOVERNING LAW</span>
+          <span class="text-slate-300 font-medium">Republic of India</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">JURISDICTION</span>
+          <span class="text-slate-300 font-medium">Ahmedabad, Gujarat</span>
+        </div>
+      </div>
+
+      <div class="mt-6 p-4 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-200 text-xs sm:text-sm leading-relaxed">
+        <strong>POLICY AGREEMENT:</strong> By accessing or using PulsePM via <a href="https://app.pulsepm.in" class="underline font-bold text-white">app.pulsepm.in</a> or our mobile application, you agree to be bound by this Acceptable Use Policy. If you do not agree, you must immediately cease all use of the Platform.
+      </div>
+    </div>
+
+    <!-- 2-Column Split: Fixed Quick Jump on LEFT, Content Stream on RIGHT -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+      
+      <!-- ============================================== -->
+      <!-- LEFT COLUMN: Fixed / Sticky Quick Jump Navigation -->
+      <!-- ============================================== -->
+      <aside class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 z-20">
+        
+        <!-- Mobile Dropdown / Collapsible for Quick Jump -->
+        <div class="lg:hidden mb-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+          <details class="group">
+            <summary class="flex items-center justify-between font-bold text-sm text-cyan-400 cursor-pointer list-none">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                <span>Jump to Section (1 — 15)</span>
+              </span>
+              <span class="transition-transform group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <nav class="mt-4 pt-3 border-t border-slate-800 flex flex-col gap-1.5 max-h-72 overflow-y-auto custom-scrollbar text-xs">
+              <a href="#section-1" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">1. Introduction & Purpose</a>
+              <a href="#section-2" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">2. Scope of This Policy</a>
+              <a href="#section-3" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">3. Legal Framework</a>
+              <a href="#section-4" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">4. Permitted Uses</a>
+              <a href="#section-5" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">5. Prohibited Uses</a>
+              <a href="#section-6" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">6. Authorised Access Only</a>
+              <a href="#section-7" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">7. API & Automation Usage</a>
+              <a href="#section-8" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">8. Monitoring & Logging</a>
+              <a href="#section-9" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">9. Enforcement & Penalties</a>
+              <a href="#section-10" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">10. Reporting a Violation</a>
+              <a href="#section-11" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">11. Appeals Process</a>
+              <a href="#section-12" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">12. Responsible Vulnerability Disclosure</a>
+              <a href="#section-13" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">13. Changes to This Policy</a>
+              <a href="#section-14" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">14. Grievance Officer</a>
+              <a href="#section-15" class="py-1.5 px-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">15. Related Policies</a>
+            </nav>
+          </details>
+        </div>
+
+        <!-- Desktop Sticky Navigation Box -->
+        <div class="hidden lg:block bg-slate-900/90 border border-slate-800 rounded-3xl p-5 shadow-xl backdrop-blur-xl">
+          <div class="flex items-center justify-between pb-3.5 mb-2 border-b border-slate-800">
+            <h3 class="font-bold text-sm tracking-wide text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              QUICK JUMP
+            </h3>
+            <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 border border-cyan-800/50 px-2 py-0.5 rounded-full">15 SECTIONS</span>
+          </div>
+
+          <!-- Sticky Link Navigation -->
+          <nav id="toc-nav" class="flex flex-col gap-1 max-h-[calc(100vh-280px)] overflow-y-auto pr-1 custom-scrollbar text-xs">
+            <a href="#section-1" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>1. Introduction & Purpose</span>
+            </a>
+            <a href="#section-2" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>2. Scope of This Policy</span>
+            </a>
+            <a href="#section-3" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>3. Legal Framework</span>
+            </a>
+            <a href="#section-4" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>4. Permitted Uses</span>
+            </a>
+            <a href="#section-5" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>5. Prohibited Uses</span>
+            </a>
+            <a href="#section-6" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>6. Authorised Access Only</span>
+            </a>
+            <a href="#section-7" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>7. API & Automation Usage</span>
+            </a>
+            <a href="#section-8" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>8. Monitoring & Logging</span>
+            </a>
+            <a href="#section-9" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>9. Enforcement & Actions</span>
+            </a>
+            <a href="#section-10" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>10. Reporting a Violation</span>
+            </a>
+            <a href="#section-11" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>11. Appeals</span>
+            </a>
+            <a href="#section-12" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>12. Vulnerability Disclosure</span>
+            </a>
+            <a href="#section-13" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>13. Changes to Policy</span>
+            </a>
+            <a href="#section-14" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>14. Grievance Officer</span>
+            </a>
+            <a href="#section-15" class="toc-link py-1.5 px-3 rounded-xl border border-transparent text-slate-400 hover:text-white hover:bg-slate-800/80 transition-all flex items-center justify-between">
+              <span>15. Related Policies</span>
+            </a>
+          </nav>
+
+          <!-- Quick Contact Box in Sidebar -->
+          <div class="mt-5 pt-4 border-t border-slate-800 text-[11px] text-slate-400 space-y-2">
+            <span class="text-white font-semibold block">Need Clarification?</span>
+            <p>Our security and compliance team is available to answer any questions.</p>
+            <a href="mailto:contact@pulsepm.in" class="inline-flex items-center gap-1.5 text-cyan-400 hover:underline font-mono">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              contact@pulsepm.in
+            </a>
+          </div>
+
+          <!-- Other Policies links -->
+          <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-400 space-y-1.5">
+            <span class="text-white font-semibold block">Related Policies</span>
+            <div class="flex flex-col gap-1">
+              <a href="/terms" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                <span class="text-slate-600">→</span> Terms and Conditions
+              </a>
+              <a href="/privacy" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                <span class="text-slate-600">→</span> Privacy Policy
+              </a>
+              <a href="/community-guidelines" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+                <span class="text-slate-600">→</span> Community Guidelines
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============================================== -->
+      <!-- RIGHT COLUMN: Complete Content Stream          -->
+      <!-- ============================================== -->
+      <div class="lg:col-span-8 xl:col-span-9 space-y-8">
+        
+        <!-- SECTION 1 -->
+        <section id="section-1" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 01</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">1. Introduction and Purpose</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              This Acceptable Use Policy (<strong class="text-white">"AUP"</strong>, <strong class="text-white">"Policy"</strong>) is issued by <strong class="text-white">Synerbit (OPC) Private Limited</strong> (<strong class="text-white">"Company"</strong>, <strong class="text-white">"we"</strong>, <strong class="text-white">"us"</strong>, <strong class="text-white">"our"</strong>), the operator of <strong class="text-white">PulsePM</strong>, a unified project management platform accessible at <a href="https://app.pulsepm.in" class="text-cyan-400 hover:underline font-mono">app.pulsepm.in</a> and via our mobile application.
+            </p>
+            <p>
+              This Policy defines the acceptable and unacceptable ways in which any individual or organisation may access and use the PulsePM platform, its infrastructure, services, data, features, and associated systems (collectively, the <strong class="text-white">"Platform"</strong> or <strong class="text-white">"Services"</strong>).
+            </p>
+            <div class="bg-slate-950/70 rounded-2xl p-5 border border-slate-800 space-y-2">
+              <h4 class="text-white font-semibold text-sm">The purpose of this AUP is to:</h4>
+              <ul class="list-disc list-inside space-y-1.5 text-slate-300 text-sm">
+                <li>Protect the security, integrity, availability, and performance of the Platform;</li>
+                <li>Protect the rights, privacy, and safety of all users;</li>
+                <li>Ensure compliance with applicable Indian laws and regulations;</li>
+                <li>Define consequences for misuse and the enforcement process.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-sm">
+              <span class="font-semibold text-white block mb-1">Integral Documentation:</span>
+              <p class="text-slate-400 text-xs sm:text-sm">
+                This AUP forms an integral part of and must be read alongside:
+              </p>
+              <div class="flex flex-wrap gap-3 mt-2 text-xs font-mono">
+                <a href="/terms" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-cyan-400 hover:border-cyan-400 transition-colors">Terms and Conditions</a>
+                <a href="/privacy" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-teal-400 hover:border-teal-400 transition-colors">Privacy Policy</a>
+                <a href="/community-guidelines" class="px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-blue-400 hover:border-blue-400 transition-colors">Community Guidelines</a>
+              </div>
+            </div>
+            <p class="text-rose-300 bg-rose-500/10 border border-rose-500/20 p-4 rounded-xl text-xs sm:text-sm">
+              By accessing or using PulsePM in any manner, you agree to be bound by this AUP. If you do not agree, you must immediately cease all use of the Platform.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section id="section-2" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 02</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">2. Scope of This Policy</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>This Policy applies universally across all users, roles, and access mediums:</p>
+            
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                  <tr>
+                    <th class="p-3.5">Who</th>
+                    <th class="p-3.5">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Registered Users</td>
+                    <td class="p-3.5">Any individual who has created a PulsePM account</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Guest / Invited Collaborators</td>
+                    <td class="p-3.5">Any person invited to a project via email invitation or invite code</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Organisational Users</td>
+                    <td class="p-3.5">Companies, firms, LLPs, or other legal entities using PulsePM for internal or client work</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Administrators</td>
+                    <td class="p-3.5">Project owners, admins, and managers operating on the Platform</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Integration Users</td>
+                    <td class="p-3.5">Any person or system accessing PulsePM through authorised integrations or APIs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="text-white font-semibold block mb-2 text-sm">Platform Mediums Covered:</span>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  <span>Web Application (<strong class="text-white">app.pulsepm.in</strong>)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  <span>Mobile Application (<strong class="text-white">Android or iOS</strong>)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  <span>APIs or integrations (present or future)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                  <span>Automated notifications, invitations & email alerts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section id="section-3" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 03</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">3. Legal Framework</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              This AUP operates in strict compliance with the statutory laws, cyber regulations, and data governance frameworks of the Republic of India:
+            </p>
+            
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                  <tr>
+                    <th class="p-3.5">Law / Regulation</th>
+                    <th class="p-3.5">Relevance to This AUP</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Information Technology Act, 2000 (IT Act)</td>
+                    <td class="p-3.5">Prohibits hacking, data theft, cyber fraud, and misuse of computer resources</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">IT (Amendment) Act, 2008</td>
+                    <td class="p-3.5">Extends offences to identity theft, cheating by personation, data breach</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021</td>
+                    <td class="p-3.5">Obligations of the platform as an intermediary, takedown procedures</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Digital Personal Data Protection Act, 2023 (DPDPA)</td>
+                    <td class="p-3.5">Rules on personal data collection, processing, storage, and cross-border transfer</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Indian Penal Code, 1860 (IPC)</td>
+                    <td class="p-3.5">Criminal liability for fraud, forgery, threats, defamation, extortion</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">IT (Reasonable Security Practices and SPDI) Rules, 2011</td>
+                    <td class="p-3.5">Security standards for sensitive personal data or information</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Consumer Protection Act, 2019</td>
+                    <td class="p-3.5">User rights, unfair trade practices, misleading representations</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Copyright Act, 1957</td>
+                    <td class="p-3.5">Protection of platform software and user-generated intellectual property</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Indian Contract Act, 1872</td>
+                    <td class="p-3.5">Binding nature of this AUP upon acceptance</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section id="section-4" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 04</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">4. Permitted Uses</h2>
+          <div class="space-y-6 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              PulsePM is designed exclusively for legitimate, lawful, and professional project and task management activities. The following activities are permitted:
+            </p>
+
+            <!-- 4.1 -->
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <h3 class="text-base font-bold text-teal-400">4.1 Core Platform Activities</h3>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Creating and managing projects, tasks, subtasks, and project categories</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Assigning tasks to team members within a project</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Updating task statuses and tracking project progress</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Adding comments and feedback on tasks in a professional and constructive manner</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Using @mentions to draw a colleague's attention to a specific task or update</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Inviting team members, colleagues, clients, or collaborators to join a project workspace</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Viewing, editing, and completing assigned tasks within your role's permissions</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Organising and prioritising tasks using due dates, priorities, and labels</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Syncing project and task data across web and mobile devices for continuity of work</li>
+                <li class="flex items-start gap-2"><span class="text-teal-400">✓</span> Receiving and managing notifications about task updates and project changes</li>
+              </ul>
+            </div>
+
+            <!-- 4.2 -->
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <h3 class="text-base font-bold text-cyan-400">4.2 Organisational and Business Use</h3>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Managing internal team projects and workflows</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Tracking client deliverables and project milestones</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Coordinating cross-functional or cross-departmental work</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Managing freelance or contract work assignments</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Onboarding new team members into project workspaces</li>
+                <li class="flex items-start gap-2"><span class="text-cyan-400">✓</span> Archiving completed projects and tasks for record-keeping</li>
+              </ul>
+            </div>
+
+            <!-- 4.3 -->
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-3">
+              <h3 class="text-base font-bold text-blue-400">4.3 Personal Productivity Use</h3>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2"><span class="text-blue-400">✓</span> Managing personal projects, goals, and to-do lists</li>
+                <li class="flex items-start gap-2"><span class="text-blue-400">✓</span> Tracking personal task progress and deadlines</li>
+                <li class="flex items-start gap-2"><span class="text-blue-400">✓</span> Self-organising work using PulsePM's task and project structure</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs sm:text-sm text-slate-400">
+              <strong class="text-white">Compliance Baseline:</strong> All permitted uses must at all times remain consistent with applicable Indian laws, consistent with these Terms, this AUP, and all other Platform policies, and respectful of the rights and privacy of other users.
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section id="section-5" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-400 font-mono text-xs font-bold border border-rose-500/20">Section 05</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">5. Prohibited Uses</h2>
+          <div class="space-y-6 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              The following activities are strictly prohibited on PulsePM. Any user found engaging in these activities will be subject to enforcement action as described in Section 9.
+            </p>
+
+            <!-- 5.1 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.1 Illegal Activities</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not use PulsePM to:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Conduct, facilitate, promote, or plan any activity that is unlawful under Indian law or the law of any applicable jurisdiction;</li>
+                <li>Engage in or facilitate fraud, forgery, cheating, financial crime, or money laundering;</li>
+                <li>Plan or coordinate activities that violate the Indian Penal Code, 1860, including criminal conspiracy, extortion, or intimidation;</li>
+                <li>Violate any court order, tribunal direction, or regulatory injunction;</li>
+                <li>Store, transmit, or coordinate the distribution of contraband, drugs, weapons, or other illegal goods or services;</li>
+                <li>Facilitate tax evasion or any violation of the Income Tax Act, 1961, GST laws, or other Indian fiscal regulations.</li>
+              </ul>
+            </div>
+
+            <!-- 5.2 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.2 Cybersecurity and Technical Violations</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li><strong class="text-white">Hack or crack:</strong> Attempt unauthorised access to the Platform, servers, databases, network infrastructure, or any user's account — violating <span class="font-mono text-cyan-300">Section 43 & Section 66</span> of the IT Act, 2000;</li>
+                <li><strong class="text-white">Introduce malware:</strong> Upload, transmit, or distribute viruses, worms, ransomware, spyware, trojans, keyloggers, or malicious payloads;</li>
+                <li><strong class="text-white">Denial of Service:</strong> Conduct DoS or DDoS attacks against the Platform or any of its users;</li>
+                <li><strong class="text-white">Port scan or probe:</strong> Probe the Platform's infrastructure to discover vulnerabilities without prior written authorisation from the Company;</li>
+                <li><strong class="text-white">Exploit bugs:</strong> Knowingly exploit any technical flaw in the Platform for personal gain or to harm others (see Section 12 for responsible disclosure);</li>
+                <li><strong class="text-white">Intercept data:</strong> Use packet sniffing, man-in-the-middle attacks, or any other method to intercept communications or data;</li>
+                <li><strong class="text-white">Bypass security controls:</strong> Circumvent authentication mechanisms, access controls, role permissions, session tokens, or rate limiters;</li>
+                <li><strong class="text-white">Brute-force:</strong> Conduct brute-force attacks on user accounts or administrative panels;</li>
+                <li><strong class="text-white">Inject malicious code:</strong> Execute SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), or code injection attacks.</li>
+              </ul>
+            </div>
+
+            <!-- 5.3 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.3 Unauthorised Data Access and Scraping</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Scrape or harvest data from the Platform using automated scripts, bots, crawlers, or automated means;</li>
+                <li>Access, copy, extract, or store any data from other users' projects, tasks, or profiles without explicit authorisation;</li>
+                <li>Use the Platform's API (present or future) in violation of its documented rate limits or usage guidelines;</li>
+                <li>Attempt to reconstruct, reverse-engineer, or clone the Platform's database schema, data structure, or logic;</li>
+                <li>Use any third-party tool or service to extract bulk data from PulsePM for commercial or competitive purposes.</li>
+              </ul>
+            </div>
+
+            <!-- 5.4 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.4 Account and Identity Violations</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Create multiple accounts for the same individual to evade a ban, restriction, or usage limitation;</li>
+                <li>Impersonate any person, company, government authority, or PulsePM staff member;</li>
+                <li>Use false identity information to create or maintain a PulsePM account;</li>
+                <li>Share your account credentials with another person or allow a third party to access PulsePM using your account;</li>
+                <li>Sell, transfer, or lease your PulsePM account or login credentials to any third party;</li>
+                <li>Use another user's credentials, whether obtained by hacking, phishing, or social engineering — violating <span class="font-mono text-cyan-300">Section 66C</span> of the IT Act, 2000 (identity theft).</li>
+              </ul>
+            </div>
+
+            <!-- 5.5 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.5 Harmful and Offensive Content</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not create, upload, transmit, or share any content that:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Is obscene, pornographic, sexually explicit, or harmful to minors — violating <span class="font-mono text-cyan-300">Section 67/67A</span> of the IT Act, 2000 and the <span class="font-mono text-cyan-300">POCSO Act, 2012</span>;</li>
+                <li>Is defamatory, libellous, or maliciously false — violating <span class="font-mono text-cyan-300">Section 499/500</span> of the IPC;</li>
+                <li>Constitutes harassment, stalking, or cyberbullying — violating <span class="font-mono text-cyan-300">Section 354D</span> of the IPC and <span class="font-mono text-cyan-300">Section 67</span> of the IT Act;</li>
+                <li>Contains threats of violence or incites violence — violating <span class="font-mono text-cyan-300">Section 506</span> of the IPC;</li>
+                <li>Promotes, glorifies, or facilitates terrorism or extremism — violating the <span class="font-mono text-cyan-300">UAPA, 1967</span>;</li>
+                <li>Promotes hatred on grounds of religion, race, caste, sex, nationality, language, or region — violating <span class="font-mono text-cyan-300">Section 153A</span> of the IPC;</li>
+                <li>Spreads disinformation or deliberate misinformation that could cause public harm;</li>
+                <li>Violates the dignity or modesty of women — violating <span class="font-mono text-cyan-300">Section 354</span> of the IPC and <span class="font-mono text-cyan-300">Section 67A</span> of the IT Act.</li>
+              </ul>
+            </div>
+
+            <!-- 5.6 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.6 Privacy Violations</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Collect or store personal data of other users accessed through the Platform for any purpose beyond legitimate project collaboration;</li>
+                <li>Publish or expose another user's private information (contact details, address, ID documents, financial details) without explicit consent (<strong class="text-white">"doxxing"</strong>);</li>
+                <li>Photograph, screenshot, or record another user's private activity and share it publicly without consent;</li>
+                <li>Process Sensitive Personal Data or Information (SPDI) of other users without explicit, informed consent;</li>
+                <li>Violate any applicable provision of the <span class="font-mono text-cyan-300">Digital Personal Data Protection Act, 2023 (DPDPA)</span>.</li>
+              </ul>
+            </div>
+
+            <!-- 5.7 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.7 Intellectual Property Violations</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Infringe the copyright, trademark, patent, or trade secret of any third party through uploaded content;</li>
+                <li>Upload or share pirated software, cracked applications, or unlicensed digital content;</li>
+                <li>Use the Platform to distribute unauthorised copies of copyrighted material;</li>
+                <li>Copy, reproduce, or reverse-engineer the Platform's source code, design, algorithms, or business logic — violating the <span class="font-mono text-cyan-300">Copyright Act, 1957</span>;</li>
+                <li>Use PulsePM's name, logo, or brand in any way that creates a false impression of endorsement, partnership, or affiliation.</li>
+              </ul>
+            </div>
+
+            <!-- 5.8 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.8 Spam and Unsolicited Communications</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Send bulk, unsolicited, or repetitive messages, notifications, or emails to other users;</li>
+                <li>Use the project invitation system to spam individuals who are not intended collaborators;</li>
+                <li>Use automated tools to mass-create projects, tasks, comments, or invitations;</li>
+                <li>Use PulsePM as a vehicle to market products or services to other users without their consent.</li>
+              </ul>
+            </div>
+
+            <!-- 5.9 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.9 System Integrity and Performance</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Take any action that overloads, disrupts, damages, or degrades the performance of servers or network infrastructure;</li>
+                <li>Use the Platform in any way that causes a disproportionate burden on our systems;</li>
+                <li>Interfere with security systems, firewalls, or intrusion detection mechanisms;</li>
+                <li>Access the Platform through unauthorised automated bots or scripts that simulate human usage without prior written consent.</li>
+              </ul>
+            </div>
+
+            <!-- 5.10 -->
+            <div class="p-5 rounded-2xl bg-slate-950/70 border border-slate-800 space-y-2">
+              <h3 class="font-bold text-rose-400 text-sm sm:text-base">5.10 Misuse of Platform Features</h3>
+              <p class="text-xs sm:text-sm text-slate-400">You must not:</p>
+              <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+                <li>Create fictitious projects, tasks, or activity logs to deceive stakeholders, management, or clients;</li>
+                <li>Manipulate task statuses or completion records to create a misleading picture of project progress;</li>
+                <li>Use the @mention system to repeatedly tag, harass, or spam a specific user;</li>
+                <li>Exploit role-based permission gaps or configuration errors to gain unauthorised access to project data;</li>
+                <li>Store sensitive government identification numbers, financial credentials, or regulated data (such as Aadhaar, PAN details, or banking credentials) in violation of applicable law.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6 -->
+        <section id="section-6" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 06</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">6. Authorised Access Only</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              Access to PulsePM systems and data is granted on a strict <strong class="text-white">need-to-use basis</strong>, specific to each user's registered account and role within their projects.
+            </p>
+            <p>
+              You are authorised to access only those systems, data, and features to which you have been explicitly granted access by your role or workspace administrators.
+            </p>
+            <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs sm:text-sm">
+              <strong class="text-amber-400 block mb-1">Statutory Warning:</strong>
+              Any attempt to access systems, accounts, or data beyond your authorised scope — whether through technical exploitation or procedural manipulation — constitutes unauthorised access under <span class="font-mono text-cyan-300">Section 43</span> of the IT Act, 2000 and attracts criminal liability under <span class="font-mono text-cyan-300">Section 66</span>.
+            </div>
+            <p>
+              If you discover that you have inadvertently been granted access to data or systems beyond your authorised scope, you must immediately report it to us at <a href="mailto:contact@pulsepm.in" class="text-cyan-400 hover:underline font-mono">contact@pulsepm.in</a> and refrain from using, copying, downloading, or disclosing such data.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 7 -->
+        <section id="section-7" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 07</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">7. API and Automation Usage</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>If and when PulsePM makes APIs or programmatic access available:</p>
+            <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-300">
+              <li>You may only use authorised APIs in accordance with the published API documentation and rate limits;</li>
+              <li>Automated use of the Platform must not exceed the rate limits or usage thresholds specified;</li>
+              <li>You may not use automated means to perform any action on the Platform that is prohibited by this AUP;</li>
+              <li>API access may be revoked at any time if it is found to be in violation of this AUP or the Terms and Conditions;</li>
+              <li>You must not create, use, or distribute any unofficial, unauthorised, or reverse-engineered API for PulsePM.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- SECTION 8 -->
+        <section id="section-8" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 08</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">8. Monitoring and Logging</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <h3 class="text-sm font-bold text-white">8.1 Right to Monitor</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                Synerbit (OPC) Private Limited reserves the right to monitor usage of the Platform for security and fraud detection, investigation of reported violations, compliance with this AUP and applicable laws, and platform performance optimisation.
+              </p>
+            </div>
+
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <h3 class="text-sm font-bold text-white">8.2 Log Retention</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                We maintain server access logs, authentication logs, and usage logs in accordance with our Privacy Policy and applicable Indian law. These logs may be used as evidence in enforcement actions or legal proceedings.
+              </p>
+            </div>
+
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <h3 class="text-sm font-bold text-white">8.3 No Expectation of Privacy for Violating Activity</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                While we respect user privacy as described in our Privacy Policy, users have no expectation of privacy with respect to activities that violate this AUP, applicable law, or the rights of others. Such activities and logs may be disclosed to law enforcement authorities or in legal proceedings.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 9 -->
+        <section id="section-9" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 09</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">9. Enforcement</h2>
+          <div class="space-y-6 text-sm sm:text-base leading-relaxed text-slate-300">
+            <div>
+              <h3 class="font-bold text-white text-base mb-2">9.1 Enforcement Principles</h3>
+              <p class="text-xs sm:text-sm text-slate-300">
+                We are committed to fair, consistent, and proportional enforcement of this AUP. Enforcement decisions evaluate the nature and severity of the violation, whether it is isolated or repeated, user intent (accidental vs. deliberate), and the potential or actual harm caused.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-white text-base mb-3">9.2 Enforcement Actions (5-Tier Framework)</h3>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                    <tr>
+                      <th class="p-3.5">Severity Level</th>
+                      <th class="p-3.5">Nature of Violation</th>
+                      <th class="p-3.5">Action Taken</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-emerald-400">Level 1 — Minor</td>
+                      <td class="p-3.5">Unintentional or isolated technical misuse; minor policy breach</td>
+                      <td class="p-3.5">Written warning by email; guidance issued</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-amber-400">Level 2 — Moderate</td>
+                      <td class="p-3.5">Repeated minor violations; deliberate misuse of features</td>
+                      <td class="p-3.5">Temporary feature restriction or rate limiting</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-orange-400">Level 3 — Serious</td>
+                      <td class="p-3.5">Wilful violation causing limited harm; first-time serious offence</td>
+                      <td class="p-3.5">Account suspension (7–30 days); content removal</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-rose-400">Level 4 — Severe</td>
+                      <td class="p-3.5">Wilful violation causing significant harm; repeated serious offences</td>
+                      <td class="p-3.5">Permanent account termination; all data deleted</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-purple-400">Level 5 — Criminal</td>
+                      <td class="p-3.5">Hacking, data theft, CSAM, terrorism, extortion, identity theft</td>
+                      <td class="p-3.5 font-semibold text-rose-300">Immediate permanent ban + referral to law enforcement</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <span class="font-bold text-white block">9.3 Immediate Action</span>
+                <p class="text-slate-400 text-xs">We reserve the right to act immediately without notice if an active security threat or criminal violation is detected.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <span class="font-bold text-white block">9.4 No Refunds</span>
+                <p class="text-slate-400 text-xs">No refunds will be issued for paid subscription periods when an account is terminated or suspended for AUP violations.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                <span class="font-bold text-white block">9.5 Law Enforcement</span>
+                <p class="text-slate-400 text-xs">We cooperate fully with Indian law enforcement agencies, cybercrime cells, and judicial courts.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 10 -->
+        <section id="section-10" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 10</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">10. Reporting a Violation</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              If you observe or suspect a violation of this AUP by another user or third party, please submit a formal report to our team.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-xs sm:text-sm space-y-2">
+              <span class="text-white font-bold block text-sm">10.1 How to Report</span>
+              <p class="font-mono text-cyan-300">📧 Email: contact@pulsepm.in</p>
+              <p class="font-mono text-slate-300">Subject Line: AUP Violation Report</p>
+              <div class="mt-2 text-slate-300">
+                <strong>Include in your report:</strong>
+                <ul class="list-disc list-inside mt-1 space-y-0.5 text-slate-300">
+                  <li>Your name and registered email address</li>
+                  <li>Description of the suspected violation</li>
+                  <li>The username, project name, or task/comment involved</li>
+                  <li>Approximate date and time of the incident</li>
+                  <li>Any screenshots or supporting evidence</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-white text-sm sm:text-base mb-2">10.2 What Happens After You Report</h3>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                    <tr>
+                      <th class="p-3.5">Stage</th>
+                      <th class="p-3.5">Timeframe</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Acknowledgement of report</td>
+                      <td class="p-3.5 font-mono text-cyan-400">Within 24 hours</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Preliminary assessment</td>
+                      <td class="p-3.5 font-mono text-cyan-400">Within 3 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Investigation</td>
+                      <td class="p-3.5 font-mono text-cyan-400">Within 15 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Outcome communicated (to reporter)</td>
+                      <td class="p-3.5 font-mono text-teal-400 font-bold">Within 20 business days</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-400">
+              <strong class="text-white">10.3 Good-Faith Requirement:</strong> Reports must be submitted in good faith based on a genuine belief that a violation has occurred. Filing false, frivolous, or malicious reports is itself a violation of this AUP and may result in action against the reporter's account.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 11 -->
+        <section id="section-11" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 11</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">11. Appeals</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              If you believe an enforcement action taken against your account was incorrect or based on a misunderstanding, you may submit a formal appeal.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-slate-950 border border-slate-800 text-xs sm:text-sm space-y-2">
+              <span class="text-white font-bold block text-sm">11.1 How to Appeal</span>
+              <p class="font-mono text-cyan-300">📧 Email: contact@pulsepm.in</p>
+              <p class="font-mono text-slate-300">Subject Line: AUP Enforcement Appeal — [Your Registered Email]</p>
+              <p class="text-slate-400 mt-1">Include a clear explanation of why you believe the enforcement action was erroneous, along with any relevant corroborating evidence.</p>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-white text-sm sm:text-base mb-2">11.2 Appeal Review Timeline</h3>
+              <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                <table class="w-full text-left text-xs sm:text-sm">
+                  <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                    <tr>
+                      <th class="p-3.5">Stage</th>
+                      <th class="p-3.5">Timeframe</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800 font-normal">
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Acknowledgement</td>
+                      <td class="p-3.5 font-mono text-cyan-400">Within 3 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Review and investigation</td>
+                      <td class="p-3.5 font-mono text-cyan-400">Within 15 business days</td>
+                    </tr>
+                    <tr class="hover:bg-slate-900/40">
+                      <td class="p-3.5 font-semibold text-white">Final decision communicated</td>
+                      <td class="p-3.5 font-mono text-teal-400 font-bold">Within 20 business days</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-400">
+              <strong class="text-white">11.3 Finality of Decision:</strong> The decision issued upon appeal is final and binding. No further reviews will be conducted for the same incident unless significant new evidence is presented.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 12 -->
+        <section id="section-12" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-teal-500/10 text-teal-400 font-mono text-xs font-bold border border-teal-500/20">Section 12</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">12. Responsible Vulnerability Disclosure</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              We are committed to maintaining the security of PulsePM for all users. If you discover a genuine security vulnerability in our Platform, we encourage you to report it responsibly rather than exploit it.
+            </p>
+
+            <div class="p-5 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-xs sm:text-sm space-y-2">
+              <span class="text-white font-bold block text-sm">12.1 How to Report a Security Vulnerability</span>
+              <p class="font-mono text-teal-300">📧 Email: contact@pulsepm.in</p>
+              <p class="font-mono text-slate-300">Subject Line: Security Vulnerability Report</p>
+              <p class="text-slate-300 mt-1">Include: Description of vulnerability, steps to reproduce, potential impact, and technical logs.</p>
+            </div>
+
+            <div class="bg-slate-950/70 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <h3 class="text-sm font-bold text-white">12.2 Our Commitment</h3>
+              <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm text-slate-300">
+                <li>Acknowledge receipt within 48 hours;</li>
+                <li>Investigate and validate the reported vulnerability;</li>
+                <li>Work to remediate the issue in a reasonable timeframe;</li>
+                <li>Maintain confidentiality about the vulnerability until it is patched.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-xs sm:text-sm space-y-2 text-rose-200">
+              <strong class="text-white block">12.3 What Responsible Disclosure Is NOT:</strong>
+              <p>Responsible disclosure does not authorise you to access, copy, or exfiltrate user data, disrupt services, exploit flaws for personal gain, or publicly disclose bugs before they are remediated.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 13 -->
+        <section id="section-13" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 13</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">13. Changes to This Policy</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              We reserve the right to update or modify this AUP at any time. When we make material changes, we will:
+            </p>
+            <ul class="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-300">
+              <li>Update the "Last Updated" date at the top of this document;</li>
+              <li>Publish the revised AUP at <a href="/acceptable-use-policy" class="text-cyan-400 hover:underline font-mono">pulsepm.in/acceptable-use-policy</a>;</li>
+              <li>Display an in-platform notice across web and mobile applications;</li>
+              <li>Notify registered users by email at least 15 days before material changes take effect.</li>
+            </ul>
+            <p class="text-xs text-slate-400">
+              Your continued use of PulsePM after the effective date of the revised AUP constitutes your acceptance of the changes.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 14 -->
+        <section id="section-14" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 14</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">14. Contact and Grievance Officer</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              In accordance with the Information Technology Act, 2000 and rules made thereunder, any queries, reports, or concerns related to this Acceptable Use Policy may be addressed to our Grievance Officer:
+            </p>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                  <tr>
+                    <th class="p-3.5">Detail</th>
+                    <th class="p-3.5">Information</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Name</td>
+                    <td class="p-3.5">Rajeev Ranjan Kumar</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Designation</td>
+                    <td class="p-3.5">Grievance Officer</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Company</td>
+                    <td class="p-3.5 font-semibold text-cyan-400">Synerbit (OPC) Private Limited</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Email</td>
+                    <td class="p-3.5"><a href="mailto:contact@pulsepm.in" class="text-cyan-400 hover:underline font-mono">contact@pulsepm.in</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Platform</td>
+                    <td class="p-3.5"><a href="https://app.pulsepm.in" class="text-cyan-400 hover:underline font-mono">app.pulsepm.in</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Registered Office</td>
+                    <td class="p-3.5">Block-A, 606 Prahladnagar Trade Center, B/H Titanium City Center, Vejalpur, Ahmedabad, Gujarat — 380051, India</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Response Time</td>
+                    <td class="p-3.5 font-mono text-teal-400 font-bold">Within 30 days of receiving a complaint</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 15 -->
+        <section id="section-15" class="aup-section bg-slate-900/60 border border-slate-800 rounded-3xl p-6 sm:p-8 hover:border-slate-700 transition-all duration-300 relative">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 rounded-md bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold border border-cyan-500/20">Section 15</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4">15. Related Policies</h2>
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-300">
+            <p>
+              This Acceptable Use Policy must be read alongside the following governance documents:
+            </p>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-slate-950/80 text-cyan-400 font-mono text-xs uppercase border-b border-slate-800">
+                  <tr>
+                    <th class="p-3.5">Document</th>
+                    <th class="p-3.5">URL</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800 font-normal">
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Terms and Conditions</td>
+                    <td class="p-3.5"><a href="/terms" class="text-cyan-400 hover:underline font-mono">pulsepm.in/terms</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Privacy Policy</td>
+                    <td class="p-3.5"><a href="/privacy" class="text-cyan-400 hover:underline font-mono">pulsepm.in/privacy</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Community Guidelines</td>
+                    <td class="p-3.5"><a href="/community-guidelines" class="text-cyan-400 hover:underline font-mono">pulsepm.in/community-guidelines</a></td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/40">
+                    <td class="p-3.5 font-semibold text-white">Refund Policy</td>
+                    <td class="p-3.5"><a href="/refund-policy" class="text-cyan-400 hover:underline font-mono">pulsepm.in/refund-policy</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-teal-500/10 to-blue-500/10 border border-teal-500/30 text-teal-200 text-xs sm:text-sm leading-relaxed">
+              This document constitutes the complete and authoritative <strong class="text-white">Acceptable Use Policy</strong> of PulsePM operated by <strong class="text-white">Synerbit (OPC) Private Limited</strong>. It supersedes all prior versions of this Policy.
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Return to Home CTA Card -->
+    <div class="mt-16 bg-slate-900/40 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
+      <h3 class="text-2xl font-bold text-white mb-3">Ready to Collaborate Safely & Productively?</h3>
+      <p class="text-slate-400 text-sm mb-6 max-w-lg mx-auto">
+        Join teams who trust PulsePM for secure, lightning-fast sprint telemetry and task management.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-sm transition-all shadow-lg">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>Return to PulsePM Home</span>
+        </a>
+        <a href="https://app.pulsepm.in" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-cyan-500/20 hover:scale-[1.02] transition-all">
+          <span>Open Web App</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Floating Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 p-3 rounded-xl bg-slate-900/90 border border-slate-700 text-slate-300 hover:text-white hover:border-cyan-400 shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-sm mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg overflow-hidden border border-slate-700">
+            <img src="assets/logo.png" alt="PulsePM" class="w-full h-full object-cover">
+          </div>
+          <span class="text-sm font-bold text-white">Pulse<span class="text-cyan-400">PM</span></span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-500">By Synerbit (OPC) Private Limited</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm">
+          <a href="/" class="hover:text-cyan-400 transition-colors">Home</a>
+          <a href="/careers" class="hover:text-cyan-400 transition-colors">Careers</a>
+          <a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy Policy</a>
+          <a href="/terms" class="hover:text-cyan-400 transition-colors">Terms and Conditions</a>
+          <a href="/community-guidelines" class="hover:text-cyan-400 transition-colors">Community Guidelines</a>
+          <a href="/acceptable-use-policy" class="text-cyan-400 font-semibold transition-colors">Acceptable Use Policy</a>
+          <a href="mailto:contact@pulsepm.in" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+        <p>© 2026 Synerbit (OPC) Private Limited. All rights reserved.</p>
+        <p class="font-mono">Ahmedabad, Gujarat, India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Active TOC ScrollSpy Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.aup-section');
+      const navLinks = document.querySelectorAll('#toc-nav .toc-link');
+      const backToTop = document.getElementById('backToTop');
+
+      // ScrollSpy
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-80px 0px -70% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(section => observer.observe(section));
+
+      // Back to top button visibility
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTop.classList.remove('opacity-0', 'pointer-events-none');
+          backToTop.classList.add('opacity-100');
+        } else {
+          backToTop.classList.add('opacity-0', 'pointer-events-none');
+          backToTop.classList.remove('opacity-100');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

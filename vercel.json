@@ -12,6 +12,26 @@
       "source": "/index",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/aup",
+      "destination": "/acceptable-use-policy",
+      "permanent": true
+    },
+    {
+      "source": "/acceptable-use",
+      "destination": "/acceptable-use-policy",
+      "permanent": true
     }
   ]
 }
