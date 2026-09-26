@@ -39,6 +39,11 @@
       box-shadow: 0 0 20px rgba(0, 229, 163, 0.15);
     }
   </style>
+  <script>
+    if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/index') {
+      window.history.replaceState(null, '', '/' + (window.location.search || '') + (window.location.hash || ''));
+    }
+  </script>
 </head>
 <body class="bg-[#070b14] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] selection:bg-cyan-500/30 selection:text-cyan-300 min-h-screen overflow-x-hidden antialiased">
 
@@ -1201,10 +1206,10 @@
         <div>
           <h5 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Company & Legal</h5>
           <ul class="space-y-2 text-xs">
-            <li><a href="careers.html" class="text-teal-400 font-semibold hover:text-cyan-300 transition-colors flex items-center gap-1.5">Careers (We're Hiring!) <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span></a></li>
-            <li><a href="privacy.html" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
-            <li><a href="terms.html" class="hover:text-cyan-400 transition-colors">Terms and Conditions</a></li>
-            <li><a href="community-guidelines.html" class="hover:text-cyan-400 transition-colors">Community Guidelines</a></li>
+            <li><a href="/careers" class="text-teal-400 font-semibold hover:text-cyan-300 transition-colors flex items-center gap-1.5">Careers (We're Hiring!) <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span></a></li>
+            <li><a href="/privacy" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="/terms" class="hover:text-cyan-400 transition-colors">Terms and Conditions</a></li>
+            <li><a href="/community-guidelines" class="hover:text-cyan-400 transition-colors">Community Guidelines</a></li>
             <li><a href="mailto:contact@pulsepm.in" class="hover:text-cyan-400 transition-colors">Contact Support</a></li>
           </ul>
         </div>
