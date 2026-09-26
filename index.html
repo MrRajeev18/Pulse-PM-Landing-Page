@@ -15,6 +15,9 @@
       theme: {
         extend: {
           colors: {
+            slate: {
+              850: '#151f32'
+            },
             brand: {
               teal: '#00e5a3',
               cyan: '#00d2ff',
@@ -100,14 +103,14 @@
 
       <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden lg:hidden pb-6 pt-2 border-t border-slate-800/80 space-y-2 text-sm">
-        <a href="#problem" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">The Problem</a>
-        <a href="#solution" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">The Solution</a>
-        <a href="#how-it-works" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">How It Works</a>
-        <a href="#features" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">Key Features</a>
-        <a href="#audiences" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">Built for Teams</a>
-        <a href="#walkthrough" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">Screenshots & Walkthrough</a>
-        <a href="#why-pulsepm" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">Why PulsePM?</a>
-        <a href="#use-cases" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-850">Use Cases</a>
+        <a href="#problem" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">The Problem</a>
+        <a href="#solution" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">The Solution</a>
+        <a href="#how-it-works" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">How It Works</a>
+        <a href="#features" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Key Features</a>
+        <a href="#audiences" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Built for Teams</a>
+        <a href="#walkthrough" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Screenshots & Walkthrough</a>
+        <a href="#why-pulsepm" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Why PulsePM?</a>
+        <a href="#use-cases" class="block px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">Use Cases</a>
         <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2">
           <a href="https://app.pulsepm.in" class="w-full text-center py-2.5 rounded-lg border border-slate-700 text-slate-300 font-medium">Login to Workspace</a>
           <a href="https://app.pulsepm.in" class="w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-md">Get Started Free</a>
@@ -305,7 +308,7 @@
   <!-- ==================================================== -->
   <!-- 2. THE PROBLEM                                       -->
   <!-- ==================================================== -->
-  <section id="problem" class="py-20 md:py-28 relative border-t border-slate-850">
+  <section id="problem" class="py-20 md:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -359,7 +362,7 @@
   <!-- ==================================================== -->
   <!-- 3. THE SOLUTION — PULSEPM                            -->
   <!-- ==================================================== -->
-  <section id="solution" class="py-20 md:py-28 relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-t border-slate-850">
+  <section id="solution" class="py-20 md:py-28 relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -416,7 +419,7 @@
             </div>
 
             <div class="space-y-4">
-              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-850 flex items-center gap-4">
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center gap-4">
                 <span class="text-3xl">🎯</span>
                 <div>
                   <h4 class="text-sm font-bold text-white">Effortless Project Setup</h4>
@@ -424,7 +427,7 @@
                 </div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-850 flex items-center gap-4">
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center gap-4">
                 <span class="text-3xl">👥</span>
                 <div>
                   <h4 class="text-sm font-bold text-white">Role-Based Accountability</h4>
@@ -432,7 +435,7 @@
                 </div>
               </div>
 
-              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-850 flex items-center gap-4">
+              <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center gap-4">
                 <span class="text-3xl">📊</span>
                 <div>
                   <h4 class="text-sm font-bold text-white">Live Cardiogram Progress</h4>
@@ -450,7 +453,7 @@
   <!-- ==================================================== -->
   <!-- 4. HOW PULSEPM WORKS (5 Steps)                       -->
   <!-- ==================================================== -->
-  <section id="how-it-works" class="py-20 md:py-28 relative border-t border-slate-850">
+  <section id="how-it-works" class="py-20 md:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -531,7 +534,7 @@
   <!-- ==================================================== -->
   <!-- 5. KEY FEATURES (8 Core Modules)                     -->
   <!-- ==================================================== -->
-  <section id="features" class="py-20 md:py-28 relative bg-slate-950/60 border-t border-slate-850">
+  <section id="features" class="py-20 md:py-28 relative bg-slate-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -624,7 +627,7 @@
   <!-- ==================================================== -->
   <!-- 6. BUILT FOR TEAMS THAT GET THINGS DONE              -->
   <!-- ==================================================== -->
-  <section id="audiences" class="py-20 md:py-28 relative border-t border-slate-850">
+  <section id="audiences" class="py-20 md:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -639,7 +642,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         <!-- 1. College Students -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-850 hover:border-cyan-500/30 transition space-y-3">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/30 transition space-y-3">
           <div class="text-2xl">🎓</div>
           <h3 class="text-base font-bold text-white">College Students</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
@@ -648,7 +651,7 @@
         </div>
 
         <!-- 2. Student Clubs -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-850 hover:border-teal-500/30 transition space-y-3">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-teal-500/30 transition space-y-3">
           <div class="text-2xl">🎪</div>
           <h3 class="text-base font-bold text-white">Student Clubs & Committees</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
@@ -657,7 +660,7 @@
         </div>
 
         <!-- 3. Project Teams -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-850 hover:border-blue-500/30 transition space-y-3">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-blue-500/30 transition space-y-3">
           <div class="text-2xl">💻</div>
           <h3 class="text-base font-bold text-white">Project Teams</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
@@ -666,7 +669,7 @@
         </div>
 
         <!-- 4. Small Startups -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-850 hover:border-indigo-500/30 transition space-y-3">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/30 transition space-y-3">
           <div class="text-2xl">🚀</div>
           <h3 class="text-base font-bold text-white">Small Startups</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
@@ -675,7 +678,7 @@
         </div>
 
         <!-- 5. Small Businesses -->
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-850 hover:border-emerald-500/30 transition space-y-3">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/30 transition space-y-3">
           <div class="text-2xl">💼</div>
           <h3 class="text-base font-bold text-white">Small Businesses</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
@@ -690,7 +693,7 @@
   <!-- ==================================================== -->
   <!-- 7. PRODUCT WALKTHROUGH / SCREENSHOTS                 -->
   <!-- ==================================================== -->
-  <section id="walkthrough" class="py-20 md:py-28 relative bg-slate-950/70 border-t border-slate-850">
+  <section id="walkthrough" class="py-20 md:py-28 relative bg-slate-950/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
@@ -754,7 +757,7 @@
               <span class="text-[10px] text-emerald-400 font-mono">Tasks finished this week</span>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> You never have to ask teammates for updates. The moment someone marks a subtask done or leaves a note, your personal dashboard updates in real time.
           </p>
         </div>
@@ -774,11 +777,11 @@
               <span class="text-xs text-teal-400 font-mono bg-teal-500/10 px-2 py-0.5 rounded">68% Complete</span>
             </div>
             <p class="text-xs text-slate-400">Managing sponsorships, stage setup, registrations, and website release.</p>
-            <div class="w-full bg-slate-850 h-2 rounded-full overflow-hidden">
+            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
               <div class="bg-gradient-to-r from-teal-400 to-cyan-500 h-full rounded-full" style="width: 68%"></div>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> Switch between different club activities or startup projects with a single click. Keep documents, files, and collaborators strictly organized.
           </p>
         </div>
@@ -793,7 +796,7 @@
             <span class="px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30 text-xs font-mono">Module 03</span>
           </div>
           <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-2.5 text-xs">
-            <div class="flex justify-between items-center text-slate-300 font-semibold pb-1 border-b border-slate-850">
+            <div class="flex justify-between items-center text-slate-300 font-semibold pb-1 border-b border-slate-800">
               <span>Task: Prepare Investor Deck</span>
               <span class="text-amber-400 font-mono">Due Friday</span>
             </div>
@@ -810,7 +813,7 @@
               <span>Final typography polish and PDF export (@Priya)</span>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> Avoid vague tasks. Subtasks give team members actionable checkboxes with instant status syncing.
           </p>
         </div>
@@ -825,28 +828,28 @@
             <span class="px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 text-xs font-mono">Module 04</span>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center justify-between">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
               <div>
                 <strong class="text-white block">Rajeev Ranjan</strong>
                 <span class="text-slate-500 text-[11px]">Owner • Full Access</span>
               </div>
               <span class="px-2 py-0.5 rounded text-[10px] bg-amber-500/10 text-amber-400 font-mono">Owner</span>
             </div>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center justify-between">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
               <div>
                 <strong class="text-white block">Aditi Sharma</strong>
                 <span class="text-slate-500 text-[11px]">Admin • Task Assignment</span>
               </div>
               <span class="px-2 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 font-mono">Admin</span>
             </div>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center justify-between">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
               <div>
                 <strong class="text-white block">Vikram Patel</strong>
                 <span class="text-slate-500 text-[11px]">Contributor • Assigned 4 tasks</span>
               </div>
               <span class="px-2 py-0.5 rounded text-[10px] bg-teal-500/10 text-teal-400 font-mono">Member</span>
             </div>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center justify-between">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
               <div>
                 <strong class="text-white block">Mentor / Faculty</strong>
                 <span class="text-slate-500 text-[11px]">Viewer • Read-only progress</span>
@@ -854,7 +857,7 @@
               <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300 font-mono">Viewer</span>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> Invite stakeholders or professors as read-only Viewers so they can inspect progress without accidentally altering assignments.
           </p>
         </div>
@@ -871,14 +874,14 @@
           <div class="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3 text-xs">
             <div class="space-y-1">
               <span class="text-cyan-400 font-bold">@Aditi (10:14 AM):</span>
-              <p class="text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-850">Just updated the task "Sponsorship Brochure". Added PDF draft v2.</p>
+              <p class="text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800">Just updated the task "Sponsorship Brochure". Added PDF draft v2.</p>
             </div>
             <div class="space-y-1">
               <span class="text-teal-400 font-bold">@Rajeev (10:16 AM):</span>
-              <p class="text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-850">Looks great! Moving task status to In Review. I will finalize by 2 PM.</p>
+              <p class="text-slate-300 bg-slate-900 p-2.5 rounded-lg border border-slate-800">Looks great! Moving task status to In Review. I will finalize by 2 PM.</p>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> No need to ask "Did you send the file in the WhatsApp group?". Chat is permanently pinned to the relevant project.
           </p>
         </div>
@@ -893,18 +896,18 @@
             <span class="px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/30 text-xs font-mono">Module 06</span>
           </div>
           <div class="space-y-2 text-xs">
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center gap-3">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
               <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
               <span class="text-slate-300"><strong>Aditi</strong> assigned you to <strong>"Frontend UI Integration"</strong></span>
               <span class="ml-auto text-slate-500 text-[10px] font-mono">5m ago</span>
             </div>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-850 flex items-center gap-3">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center gap-3">
               <span class="w-2 h-2 rounded-full bg-amber-400"></span>
               <span class="text-slate-300">Reminder: <strong>"Submit Budget Proposal"</strong> is due tomorrow at 5:00 PM</span>
               <span class="ml-auto text-slate-500 text-[10px] font-mono">1h ago</span>
             </div>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+          <p class="text-xs text-slate-400 leading-relaxed bg-slate-950/60 p-4 rounded-xl border border-slate-800">
             <strong>Key Benefit:</strong> Synchronized instantly between your desktop browser and your mobile app.
           </p>
         </div>
@@ -917,7 +920,7 @@
   <!-- ==================================================== -->
   <!-- 8. WHY PULSEPM? (5 Key Pillars)                      -->
   <!-- ==================================================== -->
-  <section id="why-pulsepm" class="py-20 md:py-28 relative border-t border-slate-850">
+  <section id="why-pulsepm" class="py-20 md:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -983,7 +986,7 @@
   <!-- ==================================================== -->
   <!-- 9. USE CASES (5 Concrete Scenarios)                  -->
   <!-- ==================================================== -->
-  <section id="use-cases" class="py-20 md:py-28 relative bg-slate-950/60 border-t border-slate-850">
+  <section id="use-cases" class="py-20 md:py-28 relative bg-slate-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -1074,7 +1077,7 @@
   <!-- ==================================================== -->
   <!-- 10. YOUR TEAM, ONE WORKSPACE                         -->
   <!-- ==================================================== -->
-  <section id="one-workspace" class="py-20 md:py-28 relative border-t border-slate-850">
+  <section id="one-workspace" class="py-20 md:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-14 shadow-2xl relative overflow-hidden">
