@@ -12,9 +12,27 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Section highlight on active scroll */
     .terms-section {
       scroll-margin-top: 100px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(51, 65, 85, 0.8);
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #00e5a3;
+    }
+    .toc-link.active {
+      color: #00e5a3;
+      background-color: rgba(0, 229, 163, 0.1);
+      border-color: rgba(0, 229, 163, 0.3);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -66,7 +84,7 @@
   <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
     
     <!-- Title Card -->
-    <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-10 mb-12 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+    <div class="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-10 mb-10 shadow-2xl backdrop-blur-xl relative overflow-hidden">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-4">
         Legal Contract
       </div>
@@ -101,48 +119,151 @@
       </div>
     </div>
 
-    <!-- Quick Navigation Jump Bar (Horizontal on mobile/tablet) -->
-    <div class="mb-10 bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">QUICK JUMP TO SECTION (1 TO 22)</span>
-        <span class="text-[11px] text-cyan-400 font-mono">Click to navigate</span>
-      </div>
-      <div class="flex flex-wrap gap-1.5 max-h-32 overflow-y-auto pr-1">
-        <a href="#sec-1" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">1. Acceptance</a>
-        <a href="#sec-2" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">2. Legal Framework</a>
-        <a href="#sec-3" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">3. Eligibility</a>
-        <a href="#sec-4" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">4. Account</a>
-        <a href="#sec-5" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">5. Services</a>
-        <a href="#sec-6" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">6. Obligations</a>
-        <a href="#sec-7" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">7. Prohibited</a>
-        <a href="#sec-8" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">8. Content (UGC)</a>
-        <a href="#sec-9" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">9. IP Rights</a>
-        <a href="#sec-10" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">10. Privacy</a>
-        <a href="#sec-11" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">11. Third-Party</a>
-        <a href="#sec-12" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">12. Pricing</a>
-        <a href="#sec-13" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">13. Liability</a>
-        <a href="#sec-14" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">14. Indemnity</a>
-        <a href="#sec-15" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">15. Termination</a>
-        <a href="#sec-16" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">16. Modifications</a>
-        <a href="#sec-17" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">17. Dispute & Arb.</a>
-        <a href="#sec-18" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">18. Grievance</a>
-        <a href="#sec-19" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">19. Severability</a>
-        <a href="#sec-20" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">20. Waiver</a>
-        <a href="#sec-21" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">21. Entire Agreement</a>
-        <a href="#sec-22" class="px-2.5 py-1 text-xs rounded-lg bg-slate-800/80 hover:bg-cyan-500/20 hover:text-cyan-300 border border-slate-700/60 transition">22. Contact Us</a>
-      </div>
-    </div>
+    <!-- 2-Column Split: Fixed Quick Jump on LEFT, Content Stream on RIGHT -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+      
+      <!-- ============================================== -->
+      <!-- LEFT COLUMN: Fixed / Sticky Quick Jump Navigation -->
+      <!-- ============================================== -->
+      <aside class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-24 z-20">
+        
+        <!-- Mobile Dropdown / Collapsible for Quick Jump -->
+        <div class="lg:hidden mb-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+          <details class="group">
+            <summary class="flex items-center justify-between font-bold text-sm text-cyan-400 cursor-pointer list-none">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+                <span>Jump to Section (1 — 22)</span>
+              </span>
+              <span class="transition-transform group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="mt-4 pt-3 border-t border-slate-800 max-h-64 overflow-y-auto space-y-1 text-xs">
+              <a href="#sec-1" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">1. Acceptance of Terms</a>
+              <a href="#sec-2" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">2. Legal Framework</a>
+              <a href="#sec-3" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">3. Eligibility</a>
+              <a href="#sec-4" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">4. Account Registration</a>
+              <a href="#sec-5" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">5. Description of Services</a>
+              <a href="#sec-6" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">6. User Obligations</a>
+              <a href="#sec-7" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">7. Prohibited Conduct</a>
+              <a href="#sec-8" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">8. User-Generated Content</a>
+              <a href="#sec-9" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">9. Intellectual Property</a>
+              <a href="#sec-10" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">10. Privacy & Data Protection</a>
+              <a href="#sec-11" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">11. Third-Party Services</a>
+              <a href="#sec-12" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">12. Subscription & Pricing</a>
+              <a href="#sec-13" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">13. Disclaimers & Liability</a>
+              <a href="#sec-14" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">14. Indemnification</a>
+              <a href="#sec-15" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">15. Term & Termination</a>
+              <a href="#sec-16" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">16. Modifications to Terms</a>
+              <a href="#sec-17" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">17. Dispute & Arbitration</a>
+              <a href="#sec-18" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">18. Grievance Redressal</a>
+              <a href="#sec-19" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">19. Severability</a>
+              <a href="#sec-20" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">20. Waiver</a>
+              <a href="#sec-21" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">21. Entire Agreement</a>
+              <a href="#sec-22" class="block py-1.5 px-2.5 rounded-lg text-slate-300 hover:bg-slate-800">22. Contact Us</a>
+            </div>
+          </details>
+        </div>
 
-    <!-- ======================================================== -->
-    <!-- SPLIT SECTIONS (Headings on RIGHT, Content on LEFT) -->
-    <!-- ======================================================== -->
-    <div class="space-y-16">
+        <!-- Desktop Fixed / Sticky Sidebar -->
+        <div class="hidden lg:block bg-slate-900/90 border border-slate-800 rounded-3xl p-5 shadow-2xl backdrop-blur-xl">
+          <div class="flex items-center justify-between pb-3.5 border-b border-slate-800 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span class="text-xs font-bold text-white uppercase tracking-wider font-mono">Quick Navigation</span>
+            </div>
+            <span class="text-[10px] text-slate-500 font-mono">22 Sections</span>
+          </div>
 
-      <!-- Section 1 -->
-      <section id="sec-1" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <!-- Content: Left / Other side -->
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <nav class="custom-scrollbar max-h-[calc(100vh-200px)] overflow-y-auto space-y-1 text-xs pr-1 font-medium" id="toc-nav">
+            <a href="#sec-1" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">01.</span> Acceptance of Terms
+            </a>
+            <a href="#sec-2" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">02.</span> Legal Framework
+            </a>
+            <a href="#sec-3" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">03.</span> Eligibility
+            </a>
+            <a href="#sec-4" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">04.</span> Account Registration
+            </a>
+            <a href="#sec-5" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">05.</span> Description of Services
+            </a>
+            <a href="#sec-6" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">06.</span> User Obligations
+            </a>
+            <a href="#sec-7" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">07.</span> Prohibited Conduct
+            </a>
+            <a href="#sec-8" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">08.</span> User-Generated Content
+            </a>
+            <a href="#sec-9" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">09.</span> Intellectual Property
+            </a>
+            <a href="#sec-10" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">10.</span> Privacy & Data Protection
+            </a>
+            <a href="#sec-11" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">11.</span> Third-Party Services
+            </a>
+            <a href="#sec-12" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">12.</span> Subscription & Pricing
+            </a>
+            <a href="#sec-13" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">13.</span> Disclaimers & Liability
+            </a>
+            <a href="#sec-14" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">14.</span> Indemnification
+            </a>
+            <a href="#sec-15" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">15.</span> Term & Termination
+            </a>
+            <a href="#sec-16" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">16.</span> Modifications to Terms
+            </a>
+            <a href="#sec-17" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">17.</span> Dispute & Arbitration
+            </a>
+            <a href="#sec-18" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">18.</span> Grievance Redressal
+            </a>
+            <a href="#sec-19" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">19.</span> Severability
+            </a>
+            <a href="#sec-20" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">20.</span> Waiver
+            </a>
+            <a href="#sec-21" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">21.</span> Entire Agreement
+            </a>
+            <a href="#sec-22" class="toc-link block px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 border border-transparent transition">
+              <span class="font-mono text-cyan-400 mr-1.5">22.</span> Contact Us
+            </a>
+          </nav>
+
+          <div class="mt-4 pt-3.5 border-t border-slate-800 text-[11px] text-slate-400 text-center">
+            <a href="privacy.html" class="hover:text-cyan-400 underline">Switch to Privacy Policy →</a>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ============================================== -->
+      <!-- RIGHT COLUMN: Main Document Content Stream -->
+      <!-- ============================================== -->
+      <div class="lg:col-span-8 xl:col-span-9 space-y-10">
+
+        <!-- Section 1 -->
+        <section id="sec-1" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 01</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Introduction and Acceptance of Terms</h2>
+          </div>
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               These Terms and Conditions ("Terms", "Agreement") constitute a legally binding agreement between you ("User", "you", "your") and <strong>Synerbit (OPC) Private Limited</strong> ("Company", "we", "us", "our"), a One Person Company incorporated under the Companies Act, 2013, having its registered office at:
             </p>
@@ -167,23 +288,15 @@
               you are entering into a binding contract with Synerbit (OPC) Private Limited under the <strong>Indian Contract Act, 1872</strong>, and you represent that you have the legal capacity and authority to enter into such an agreement.
             </p>
           </div>
+        </section>
 
-          <!-- Section Heading: RIGHT side -->
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 01</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Introduction & Acceptance of Terms</h2>
-            <p class="text-xs text-slate-400 mt-2">Binding contract under the Indian Contract Act, 1872</p>
-            <div class="mt-4 pt-3 border-t border-slate-800 text-[11px] text-slate-500 font-mono">
-              app.pulsepm.in • pulsepm.in
-            </div>
+        <!-- Section 2 -->
+        <section id="sec-2" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 02</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Legal Framework</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 2 -->
-      <section id="sec-2" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>These Terms are governed by and operate in accordance with the following Indian laws and regulations:</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
               <div class="p-2.5 rounded-lg bg-slate-950/50 border border-slate-800/80 flex items-center gap-2">
@@ -221,19 +334,15 @@
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 02</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Legal Framework</h2>
-            <p class="text-xs text-slate-400 mt-2">Operating under statutory Indian corporate and tech statutes</p>
+        <!-- Section 3 -->
+        <section id="sec-3" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 03</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Eligibility</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 3 -->
-      <section id="sec-3" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-teal-300">3.1 Age Requirement</h3>
               <p class="mt-1">
@@ -256,19 +365,15 @@
               </ul>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 03</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Eligibility</h2>
-            <p class="text-xs text-slate-400 mt-2">Age (18+), legal contracting capacity & corporate representation</p>
+        <!-- Section 4 -->
+        <section id="sec-4" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 04</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Account Registration</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 4 -->
-      <section id="sec-4" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">4.1 Account Creation</h3>
               <p class="mt-1">To access the full features of PulsePM, you must create an account by providing:</p>
@@ -314,22 +419,17 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 04</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Account Registration</h2>
-            <p class="text-xs text-slate-400 mt-2">Registration standards, credentials security & one-account rule</p>
+        <!-- Section 5 -->
+        <section id="sec-5" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 05</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Description of Services</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 5 -->
-      <section id="sec-5" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>PulsePM provides the following services (subject to change based on your plan):</p>
 
-            <!-- Table: Services -->
             <div class="overflow-x-auto rounded-xl border border-slate-800">
               <table class="w-full text-left border-collapse text-xs sm:text-sm">
                 <thead class="bg-slate-900/90 text-slate-200 border-b border-slate-800 font-semibold">
@@ -387,19 +487,15 @@
               We reserve the right to modify, add, suspend, or discontinue any feature of the Platform at any time, with or without prior notice, at our sole discretion. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of any Service feature.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 05</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Description of Services</h2>
-            <p class="text-xs text-slate-400 mt-2">Comprehensive suite of unified project & task management capabilities</p>
+        <!-- Section 6 -->
+        <section id="sec-6" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 06</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">User Obligations</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 6 -->
-      <section id="sec-6" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>By using the Platform, you agree to:</p>
             <ul class="space-y-3">
               <li class="p-3.5 rounded-xl bg-slate-950/50 border border-slate-800">
@@ -429,19 +525,15 @@
               </li>
             </ul>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 06</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">User Obligations</h2>
-            <p class="text-xs text-slate-400 mt-2">Standards of lawful use, professional conduct & platform compliance</p>
+        <!-- Section 7 -->
+        <section id="sec-7" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded-md">Section 07</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Prohibited Conduct</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 7 -->
-      <section id="sec-7" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>You agree that you will <strong>NOT</strong>, under any circumstances:</p>
 
             <div class="space-y-3">
@@ -500,19 +592,15 @@
               Any violation of these prohibitions may result in immediate suspension or permanent termination of your account, and may be reported to the appropriate law enforcement authorities.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-rose-400 uppercase tracking-widest block">SECTION 07</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Prohibited Conduct</h2>
-            <p class="text-xs text-slate-400 mt-2">Zero-tolerance rules on security breaches, infringement & abuse</p>
+        <!-- Section 8 -->
+        <section id="sec-8" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 08</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">User-Generated Content</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 8 -->
-      <section id="sec-8" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">8.1 Definition</h3>
               <p class="mt-1">"User-Generated Content" (UGC) refers to all content you create, upload, post, or transmit on the Platform, including but not limited to:</p>
@@ -549,19 +637,15 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 08</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">User-Generated Content</h2>
-            <p class="text-xs text-slate-400 mt-2">Ownership, hosting licence & moderation rights for UGC</p>
+        <!-- Section 9 -->
+        <section id="sec-9" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 09</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Intellectual Property Rights</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 9 -->
-      <section id="sec-9" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">9.1 Company's Intellectual Property</h3>
               <p class="mt-1">
@@ -589,19 +673,15 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 09</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Intellectual Property Rights</h2>
-            <p class="text-xs text-slate-400 mt-2">Proprietary rights under Copyright Act, 1957 & Trade Marks Act, 1999</p>
+        <!-- Section 10 -->
+        <section id="sec-10" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 10</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Privacy and Data Protection</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 10 -->
-      <section id="sec-10" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               Your use of the Platform is also governed by our Privacy Policy, available at <a href="privacy.html" class="text-cyan-400 underline font-semibold">pulsepm.in/privacy.html</a>, which is incorporated into and forms a part of these Terms by reference.
             </p>
@@ -609,19 +689,15 @@
               By using the Platform, you consent to the collection, processing, storage, and use of your personal data as described in our Privacy Policy, in accordance with the <strong>Digital Personal Data Protection Act, 2023</strong>.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 10</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Privacy & Data Protection</h2>
-            <p class="text-xs text-slate-400 mt-2">Incorporation of Privacy Policy & DPDPA, 2023 compliance</p>
+        <!-- Section 11 -->
+        <section id="sec-11" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 11</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Third-Party Services and Links</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 11 -->
-      <section id="sec-11" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">11.1 Third-Party Services</h3>
               <p class="mt-1">The Platform integrates with the following third-party services:</p>
@@ -658,19 +734,15 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 11</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Third-Party Services & Links</h2>
-            <p class="text-xs text-slate-400 mt-2">Integration terms for Firebase, Google OAuth & external web links</p>
+        <!-- Section 12 -->
+        <section id="sec-12" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 12</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Subscription, Pricing, and Payment</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 12 -->
-      <section id="sec-12" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">12.1 Free and Paid Plans</h3>
               <p class="mt-1">PulsePM may offer free-of-charge features as well as paid subscription plans. The features available under each plan will be communicated on the Platform from time to time.</p>
@@ -695,19 +767,15 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 12</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Subscription, Pricing & Payment</h2>
-            <p class="text-xs text-slate-400 mt-2">Plan tiers, billing policies, GST taxation & refund conditions</p>
+        <!-- Section 13 -->
+        <section id="sec-13" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 13</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Disclaimers and Limitation of Liability</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 13 -->
-      <section id="sec-13" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800">
               <h3 class="text-base font-bold text-white mb-2">13.1 "As Is" Basis</h3>
               <p class="text-xs uppercase tracking-wide text-slate-400 font-mono leading-relaxed">
@@ -744,19 +812,15 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 13</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Disclaimers & Liability Limits</h2>
-            <p class="text-xs text-slate-400 mt-2">Warranty disclaimers, liability caps (₹1,000 limit) & force majeure</p>
+        <!-- Section 14 -->
+        <section id="sec-14" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 14</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Indemnification</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 14 -->
-      <section id="sec-14" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               You agree to indemnify, defend, and hold harmless <strong>Synerbit (OPC) Private Limited</strong> and its directors, officers, employees, contractors, agents, and successors from and against any and all claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to:
             </p>
@@ -769,19 +833,15 @@
               <li>Any dispute between you and another user of the Platform.</li>
             </ul>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 14</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Indemnification</h2>
-            <p class="text-xs text-slate-400 mt-2">User obligation to hold harmless Company, officers & directors</p>
+        <!-- Section 15 -->
+        <section id="sec-15" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 15</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Term and Termination</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 15 -->
-      <section id="sec-15" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">15.1 Term</h3>
               <p class="mt-1">These Terms shall remain in full force and effect for as long as you use the Platform or maintain an active account, whichever is longer.</p>
@@ -814,19 +874,15 @@
               </ul>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 15</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Term & Termination</h2>
-            <p class="text-xs text-slate-400 mt-2">Account cancellation, suspension protocols & survival provisions</p>
+        <!-- Section 16 -->
+        <section id="sec-16" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 16</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Modifications to These Terms</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 16 -->
-      <section id="sec-16" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               We reserve the right to modify, update, or replace these Terms at any time at our sole discretion. When we make material changes, we will:
             </p>
@@ -839,19 +895,15 @@
               Your continued use of the Platform after the effective date of the revised Terms shall constitute your acceptance of the changes. If you do not agree to the revised Terms, you must discontinue use of the Platform.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 16</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Modifications to Terms</h2>
-            <p class="text-xs text-slate-400 mt-2">Notification process and 15-day notice for material amendments</p>
+        <!-- Section 17 -->
+        <section id="sec-17" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 17</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Governing Law and Dispute Resolution</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 17 -->
-      <section id="sec-17" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <div>
               <h3 class="text-base font-bold text-white">17.1 Governing Law</h3>
               <p class="mt-1">These Terms and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the laws of the Republic of India, without regard to its conflict of law principles.</p>
@@ -913,24 +965,19 @@
               </p>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 17</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Dispute Resolution & Arbitration</h2>
-            <p class="text-xs text-slate-400 mt-2">Sole arbitrator mechanism in Ahmedabad & waiver of class action</p>
+        <!-- Section 18 -->
+        <section id="sec-18" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 18</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Grievance Redressal</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 18 -->
-      <section id="sec-18" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               In accordance with the Information Technology Act, 2000, the IT (Intermediary Guidelines) Rules, 2021, and the Digital Personal Data Protection Act, 2023, we have designated a Grievance Officer to address any complaints or concerns regarding the Platform or these Terms.
             </p>
 
-            <!-- Table: Grievance Officer -->
             <div class="overflow-x-auto rounded-xl border border-slate-800">
               <table class="w-full text-left border-collapse text-xs sm:text-sm">
                 <thead class="bg-slate-900/90 text-slate-200 border-b border-slate-800 font-semibold">
@@ -975,70 +1022,54 @@
               We will acknowledge your complaint within 24 hours and endeavour to resolve it within 30 days of receipt.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 18</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Grievance Redressal</h2>
-            <p class="text-xs text-slate-400 mt-2">Designated officer under IT Rules 2021 & DPDPA 2023</p>
+        <!-- Section 19 -->
+        <section id="sec-19" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 19</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Severability</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 19 -->
-      <section id="sec-19" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court or arbitrator of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, or if modification is not possible, shall be severed from these Terms. The remaining provisions shall continue in full force and effect.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 19</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Severability</h2>
-            <p class="text-xs text-slate-400 mt-2">Survival of valid provisions upon partial invalidation</p>
+        <!-- Section 20 -->
+        <section id="sec-20" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 20</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Waiver</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 20 -->
-      <section id="sec-20" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               Our failure to enforce any right or provision of these Terms shall not constitute a waiver of such right or provision. Any waiver of any provision of these Terms will be effective only if it is in writing and signed by an authorised representative of Synerbit (OPC) Private Limited.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 20</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Waiver</h2>
-            <p class="text-xs text-slate-400 mt-2">Explicit written authorization required for legal waivers</p>
+        <!-- Section 21 -->
+        <section id="sec-21" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 21</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Entire Agreement</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 21 -->
-      <section id="sec-21" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               These Terms, together with our Privacy Policy (<a href="privacy.html" class="text-cyan-400 underline font-medium">pulsepm.in/privacy.html</a>) and any other policies or guidelines published on the Platform, constitute the entire agreement between you and Synerbit (OPC) Private Limited with respect to your use of the Platform, and supersede all prior and contemporaneous agreements, representations, and understandings.
             </p>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 21</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Entire Agreement</h2>
-            <p class="text-xs text-slate-400 mt-2">Supersession of all prior discussions & understanding</p>
+        <!-- Section 22 -->
+        <section id="sec-22" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm space-y-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-slate-800">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-md">Section 22</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">Contact Us</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- Section 22 -->
-      <section id="sec-22" class="terms-section p-6 sm:p-8 rounded-3xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-8 order-2 lg:order-1 space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+          <div class="text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
             <p>For any questions, concerns, or notices in connection with these Terms, please contact us at:</p>
 
             <div class="overflow-x-auto rounded-xl border border-slate-800">
@@ -1069,14 +1100,9 @@
               </table>
             </div>
           </div>
+        </section>
 
-          <div class="lg:col-span-4 order-1 lg:order-2 lg:sticky lg:top-24 bg-slate-950/60 border border-slate-800 rounded-2xl p-5 lg:text-right">
-            <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block">SECTION 22</span>
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Contact Us</h2>
-            <p class="text-xs text-slate-400 mt-2">Official corporate communication channels & office coordinates</p>
-          </div>
-        </div>
-      </section>
+      </div>
 
     </div>
 
@@ -1123,5 +1149,33 @@
     </div>
   </footer>
 
+  <!-- Active TOC ScrollSpy Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.terms-section');
+      const tocLinks = document.querySelectorAll('.toc-link');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            tocLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+                // Ensure active link is visible in scroll container
+                link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-100px 0px -60% 0px'
+      });
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </body>
 </html>
